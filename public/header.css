@@ -8,9 +8,7 @@ header .top{
 header .top img{
     padding: 0px;
     width: 100px;
-    object-fit: cover;
 }
-
 
 header .search{
     position: relative;
@@ -65,6 +63,7 @@ header .navbar{
 }
 
 header .navbar li{
+    font-weight: 600;
     font-size: 18px;
     list-style: none;
 }
@@ -86,6 +85,7 @@ header a {
     color: black;
 }
 
+
 .slideshow{
     overflow: hidden;
     width: 100%;
@@ -105,12 +105,13 @@ header a {
 }
 
 .slide{
-    width: 25%;
     position: relative;
+    width: 25%;
 }
 
 .slide img{
     width: 100%; 
+    object-fit: cover;
 }
 
 .manual-navigation{

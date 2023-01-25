@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Bootstrap 5.2 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap" rel="stylesheet">
     
+   
+    <!-- css pages -->
     <link rel="stylesheet" href="../public/global.css">
     <link rel="stylesheet" href="../public/header.css">
+    <link rel="stylesheet" href="../public/home.css">
+    <link rel="stylesheet" href="../public/footer.css">
 
+    <!-- icones link -->
     <script src="https://kit.fontawesome.com/1051284148.js" crossorigin="anonymous"></script>
-    
+   
+
+    <!-- js scripts -->
+    <script defer src = "../public/js/reviewSlideShow.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -23,7 +38,7 @@
         
         <section class="top"> 
            
-            <img src="../public/img/looka_logo_black.svg" alt="">
+            <img src="../public/img/logo.svg" alt="">
 
             <div class = "search">
                 <input type="text" placeholder="Search for your product here...">
@@ -96,15 +111,15 @@
 
                 <!-- Slides images -->
                 <div class = "slide first">
-                    <img src="../public/img/xboxbanner.png" alt="1">
+                    <img src="../public/img/banner/xboxbanner.png" alt="1">
                 </div>
 
                 <div class = "slide">
-                    <img src="../public/img/nitendobanner.jfif" alt="2">
+                    <img src="../public/img/banner/nitendobanner.jfif" alt="2">
                 </div>
 
                 <div class = "slide">
-                    <img src="../public/img/playstationbanner.jfif" alt="3">
+                    <img src="../public/img/banner/playstationbanner.jfif" alt="3">
                 </div>
                 <!--Fim Slides images -->
 
@@ -128,5 +143,214 @@
 
     </header>
 
+    <main>
+
+        <section class = "qualities">
+            
+            <div>
+                <i class="fa-brands fa-pix"></i>
+                <span class="top">Pague no pix com</span>
+                <span class="bot">12% a vista </span>
+            </div>
+
+            <div>
+                
+                <i class="fa-brands fa-cc-paypal"></i>
+                <span  class="top" >Parcelamentos em</span>
+                <span class="bot" >ate 18x</span>
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-rotate-left"></i>
+                <span  class="top" >Garantia de troca em</span>
+                <span class="bot" >ate 7 dias</span>
+
+            </div>
+
+        </section>
+
+         <!-- --------------------------------------------------------------------------------------------------------------- -->
+       
+        <h2>Best Sellers</h2>     
+        <section class = "gamedisplay">         
+         
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/populargames/PokemonScarlet.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                </a>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/populargames/mario.avif" alt="">
+                    <h2>Mario + Rabbids Sparks Of Hope</h2>
+                    <span>R$ 0,00</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/populargames/fifa23.jfif" alt="">
+                    <h2>EA SPORTS FIFA 23 Legacy Edition</h2>
+                    <span>R$ 0,00</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+        </section>
+
+        
+        <!-- --------------------------------------------------------------------------------------------------------------- -->
+        
+        <h2>Reviews</h2>     
+        <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Carousel -->
+
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h2>Nome</h2>
+                <p>Review</p>
+                <span>date</span>
+              </div>
+              <div class="carousel-item">
+                 <h2>Nome</h2>
+                <p>Review</p>
+                <span>date</span>
+              </div>
+              <div class="carousel-item">
+                 <h2>Nome</h2>
+                <p>Review</p>
+                <span>date</span>
+              </div>
+            </div>
+        </div>
+
+           
+
+        </section>
+        <!-- --------------------------------------------------------------------------------------------------------------- -->
+        
+        <h2>Promocoes</h2>
+        <section class="gamedisplay">
+
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/amongus.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount">10% at the checkout</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/assignscreed.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount" >5% at the checkout</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/sonic.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount">50% at the checkout </span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/mariokartdeluxe.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount" >5% at the checkout</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/theWatcher.jfif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount" >12% at the checkout</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="games">
+                <a href="">
+                    <img src="../public/img/promotiongames/residentEvil4.webp" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                    <span class = "discount" >7% at the checkout</span>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+        </section>
+ 
+    </main>
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <h5>About Us</h5>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Mission & Values</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <h5>Customer Service</h5>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Shipping Information</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <h5>Our Policies</h5>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <h5>Connect with us</h5>
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Copyright © 2023 My E-commerce</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    
 </body>
+
+
 </html>
