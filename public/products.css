@@ -4,10 +4,6 @@ main article {
     padding: 20px;
 }
 
-main aside {
-    grid-area: sidebar;
-    background-color: #45aaf2;
-}
 
 .wrapper {
     padding-top: 50px;
@@ -72,4 +68,9 @@ main aside {
 
 .games:hover{
     transform: scale(1.1)
+}
+
+main aside {
+    grid-area: sidebar;
+    background-color: #45aaf2;
 }
