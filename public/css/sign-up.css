@@ -19,7 +19,7 @@ main form{
 .form-control {
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
+    padding: 0.1rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -36,11 +36,12 @@ main form{
 }
 
 .g-3, .gy-3 {
-    --bs-gutter-y: 1rem;
-}
-.g-3, .gx-3 {
-    --bs-gutter-x: 1rem;
-}
+    --bs-gutter-y: 0.5rem;
+  }
+  
+  .g-3, .gx-3 {
+    --bs-gutter-x: 0.5rem;
+  }
 
 button.btn.btn-primary {
     color: white;
