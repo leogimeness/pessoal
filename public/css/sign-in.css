@@ -1,0 +1,80 @@
+.center {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    width: 100%;
+	max-width: 1000px;
+	min-height: 400px;
+}
+
+.txt_field input {
+
+    width: 300px;
+    border: solid 1px #c1c1c1;
+    padding: 10px;
+    font-size: 15px;
+
+}
+#regcostumer{
+    width: 50%;
+    padding: 10px 0px 0px 20px;
+}
+
+#regcostumer h2{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+#regcostumer form{
+    padding-top: 20px;
+}
+
+#regcostumer a{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 0px 20px 0;
+    display: block;
+    color:black;
+    text-decoration: none;
+    transition: 0.1ms;
+}
+
+#newcostumer{
+    width: 50%;
+    padding: 10px 0 0 50px;
+}
+
+#newcostumer h2{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    
+}
+
+#newcostumer p {
+padding: 20px 0px 20px 0px;
+
+}
+
+button.btn.btn-primary {
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+#newcostumer button{
+    border: none;
+    border-radius:10px;
+    width: 80px;
+    height: 50px;
+    background-color: red;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+#regcostumer a:hover{
+    color: red;
+}
