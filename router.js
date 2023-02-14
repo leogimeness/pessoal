@@ -5,5 +5,7 @@ const router = express.Router()
 
 
 router.get('/', paginasController.showIndex)
+router.get('/sign-in',paginasController.showAccount)
+
 
 module.exports = router
