@@ -57,17 +57,56 @@ header .menu{
 }
 
 header .navbar{
-
     height: 100%;
     display: flex;
     text-decoration: none;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap:50px;
 }
 
 header .navbar li{
+    position: relative;
     font-weight: 600;
     font-size: 18px;
     list-style: none;
+    display: inline-block;
+}
+
+header .navbar li a{
+    display: block;
+    padding: 5px;
+}
+
+header .navbar li ul{
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#submenuG,#submenuM,#submenuA{
+    opacity: 0;
+}
+
+header .navbar li > ul{
+    padding-left: 0px;
+    display: block;
+}
+
+header .navbar li ul li{
+    display: block;
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+header .navbar li ul li a{
+    display: block;
 }
 
 header .logos{
@@ -79,7 +118,6 @@ header .logos{
 header .logos a{
     font-size: 20px;
     padding-left:5px ;
-
 }
 
 header a {
@@ -87,6 +125,26 @@ header a {
     color: black;
 }
 
+.navbar li a:hover{
+    color: white;
+}
+
+.logos a:hover{
+    color: white;
+}
+
+.navbar li ul li:hover,
+.navbar li ul li a:hover
+{
+    color: white;
+    background-color:  rgb(255, 23, 54);
+}
+
+.userMenu > a:hover{
+    color: rgb(255, 23, 54);
+}
+
+.nav
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
