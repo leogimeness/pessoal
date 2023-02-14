@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<%- include('parts/head.ejs', {css: ['basic.css','header.css','footer.css','sign-up.css']})%>
+
+<body>
+
+<%- include("parts/header.ejs") %>
+
+<main>
+
+  <h1>Create New Customer Account</h1>
+
+  <form class="row g-3" method = "post">
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label><br>
+        <input type="text" class="form-control" id="email" >
+        <p id="textEmail"></p>
+    </div>
+    <div class="col-md-6">
+      <label for="phoneNumber" class="form-label">Phone Number</label><br>
+      <input type="text" class="form-control" id="inputPhoneNumber" >
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label><br>
+      <input type="password" class="form-control" id="Password"> 
+      <p id="textPassword" style ="font-size: 10px; color: red;padding-top: 5px;"></p>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Confirm your password</label><br>
+      <input type="password" class="form-control" id="Password2">
+      <p id="textPassword2" style ="font-size: 10px; color: red;padding-top: 5px;"></p>
+    </div>
+      <div class="col-md-6">
+        <label for="cep" class="form-label">CEP</label><br>
+        <input type="text" class="form-control" id="cepInput">
+      </div>
+      <div class="col-md-6">
+        <label for="Rua" class="form-label">Rua</label><br>
+        <input type="text" class="form-control" id="ruaInput">
+      </div>
+      <div class="col-md-6">
+        <label for="Bairro" class="form-label">Bairro</label><br>
+        <input type="text" class="form-control" id="bairroInput">
+      </div>
+      <div class="col-md-6">
+        <label for="cidade" class="form-label">Cidade</label><br>
+        <input type="text" class="form-control" id="cidadeInput">
+      </div>
+      <div class="col-md-6">
+        <label for="Estado" class="form-label">Estado</label><br>
+        <input type="select" class="form-control" id="estadoInput">
+      </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Enroll for newsletter
+      </label>
+    </div> <br>
+  </div>
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  
+  </form>
+      
+</main>
+
+<%- include('parts/footer.ejs') %>
+          
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+<script  src = "/js/validandoCep.js" defer></script>
+<script src = "/js/passwordSecVal.js" defer></script>
+</body>
+
+</html>

@@ -6,6 +6,9 @@ const paginasController = {
     },
     showAccount:(req,res) =>{
         res.render('sign-in.ejs')
+    },
+    showSignUp:(req,res) =>{
+        res.render('sign-up.ejs')
     }
 
 }
