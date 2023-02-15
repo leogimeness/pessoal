@@ -7,6 +7,7 @@ const router = express.Router()
 router.get('/', paginasController.showIndex)
 router.get('/sign-in',paginasController.showAccount)
 router.get('/sign-up',paginasController.showSignUp)
+router.get('/cart',paginasController.showCart)
 
 
 module.exports = router
