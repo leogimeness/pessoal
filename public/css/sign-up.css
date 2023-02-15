@@ -1,0 +1,51 @@
+main {
+    padding: 10px 100px;
+}
+
+main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.col-md-6,.form-check{
+    font-size: 20px;
+    padding-top: 50px;
+}
+.col-md-6 input{
+    width: 500px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.1rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #dee2e6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+}
+
+.g-3, .gy-3 {
+    --bs-gutter-y: 0.5rem;
+  }
+  
+  .g-3, .gx-3 {
+    --bs-gutter-x: 0.5rem;
+  }
+
+button.btn.btn-primary {
+    color: white;
+    background-color: red;
+    border: none;
+}
+

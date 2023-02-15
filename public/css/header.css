@@ -1,0 +1,156 @@
+header .top{
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    padding: 20px 100px;
+    align-items: center;
+}
+
+header .top img{
+    padding: 0px;
+    width: 100px;
+}
+
+header .search{
+    position: relative;
+}
+
+header .search input{
+    border: solid 1px #c1c1c1;
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 22px;
+}
+
+header .search button{
+
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: #c1c1c1;
+    right:17px;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #c1c1c1;
+}
+
+header .userMenu{
+    padding-left: 20px;
+    display:grid;
+    grid-template-columns: 100px 100px;
+    gap: 50px;
+    font-size: 20px;
+}
+
+header .menu{
+    background-color: rgb(255, 23, 54);
+    padding: 0px 100px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap:20px;
+    height: 60px;
+
+}
+
+header .navbar{
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    gap:50px;
+}
+
+header .navbar li{
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    list-style: none;
+    display: inline-block;
+}
+
+header .navbar li a{
+    display: block;
+    padding: 5px;
+}
+
+header .navbar li ul{
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#submenuG,#submenuM,#submenuA{
+    opacity: 0;
+}
+
+header .navbar li > ul{
+    padding-left: 0px;
+    display: block;
+}
+
+header .navbar li ul li{
+    display: block;
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+header .navbar li ul li a{
+    display: block;
+}
+
+header .logos{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+header .logos a{
+    font-size: 20px;
+    padding-left:5px ;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar li a:hover{
+    color: white;
+}
+
+.logos a:hover{
+    color: white;
+}
+
+.navbar li ul li:hover,
+.navbar li ul li a:hover
+{
+    color: white;
+    background-color:  rgb(255, 23, 54);
+}
+
+.userMenu > a:hover{
+    color: rgb(255, 23, 54);
+}
+
+.nav
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+   
+
+
+
+

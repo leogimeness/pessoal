@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "categoria":"switch"
+    },
+    {
+        "id":2,
+        "categoria":"64"
+    },
+    {
+        "id":3,
+        "categoria":"ds"
+    },
+    {
+        "id":4,
+        "categoria":"console"
+    }
+]
