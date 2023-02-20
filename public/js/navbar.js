@@ -1,23 +1,13 @@
-const games = document.getElementById('games');
-const merchandise = document.getElementById('merchandise');
-const acessories = document.getElementById('acessories');
+const dropdown = document.querySelectorAll(".dropdown");
 
-const submenuG = document.getElementById('submenuG')
-const submenuM = document.getElementById('submenuM')
-const submenuA = document.getElementById('submenuA')
+dropdown.forEach(item => {
+    const dropdownContent = item.querySelector(".dropdown-content");
 
-games.addEventListener('click', (e) => {
-  submenuG.style.opacity = 1;
-  e.preventDefault();
+    item.addEventListener("mouseover",()=>{
+        dropdownContent.classList.add("show");
+    });
+
+    item.addEventListener("mouseout",()=>{
+        dropdownContent.classList.remove("show");
+    });
 })
-
-merchandise.addEventListener('click', (e) => {
-  submenuM.style.opacity = 1;
-  e.preventDefault();
-})
-
-acessories.addEventListener('click', (e) => {
-  submenuA.style.opacity = 1;
-  e.preventDefault();
-})
-
