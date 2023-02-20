@@ -15,6 +15,9 @@ const paginasController = {
     },
     showProduct:(req,res) =>{
         res.render('products.ejs')
+    },
+    showProductDetail:(req,res) =>{
+        res.render('detail.ejs')
     }
 
 }

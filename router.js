@@ -9,6 +9,7 @@ router.get('/sign-in',paginasController.showAccount)
 router.get('/sign-up',paginasController.showSignUp)
 router.get('/cart',paginasController.showCart)
 router.get('/products',paginasController.showProduct)
+router.get('/detail',paginasController.showProductDetail)
 
 
 module.exports = router
