@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css','header.css','home.css','footer.css','products.css']}) %>
+
+
+<body>
+    
+<%- include('parts/header.ejs') %>
+
+
+<main>
+
+    <section class="product-container">
+
+		<div class="left-column-filter">
+			<h2>Category</h2>
+            <div class="dropdown">
+                <span>Price</span>
+                <i class="fa-solid fa-sort-down"></i>
+                <div class="checkbox">
+                    <label>R$0 - R$50<input type="checkbox"></label>
+                    <label>R$50 +<input type="checkbox"></label>
+                </div>
+            </div>
+
+        <div class="dropdown">
+            <span>Genre</span>
+            <i class="fa-solid fa-sort-down"></i>
+            <div class="checkbox">
+                <label>RPG<input type="checkbox"></label>
+                <label>SPORT<input type="checkbox"></label>
+                <label>RACE<input type="checkbox"></label>
+                <label>OTHERS<input type="checkbox"></label>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span>Console</span>
+            <i class="fa-solid fa-sort-down"></i>
+            <div class="checkbox">
+                <label>DS<input type="checkbox"></label>
+                <label>SWITCH<input type="checkbox"></label>
+            </div>
+        </div>
+
+        <button>Apply Filters</button>
+
+
+
+
+    </div>
+		
+        <div class="right-column-products">
+			
+            <div class="games">
+                <a href="">
+                    <img src="/img/jogos/PokemonScarlet.avif" alt="">
+                    <h2>Pokémon™ Scarlet</h2>
+                    <span>R$ 0,00</span>
+                </a>
+
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="games">
+                <a href="">
+                    <img src="/img/jogos/mario.avif" alt="">
+                    <h2>Mario + Rabbids Sparks Of Hope</h2>
+                    <span>R$ 0,00</span>
+                </a>
+
+                <button>Add to Cart</button>
+            </div>
+
+		
+        </div>
+
+
+	</section>
+
+
+</main>
+    
+<%- include("parts/footer.ejs") %>
+
+    
+</body>
+</html>

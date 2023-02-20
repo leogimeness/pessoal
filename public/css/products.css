@@ -1,31 +1,29 @@
-main article {
-    grid-area: content;
-    background-color: #20bf6b;
-    padding: 20px;
-}
-
-
-.wrapper {
-    padding-top: 50px;
+.product-container {
     display: grid;
+    grid-template-columns: 20% 80%;
     grid-gap: 20px;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-      "sidebar content"
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.gamedisplay{
-    
+.left-column-filter {
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.right-column-products {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:25px
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.games  {
-    background-color: grey;
-    position: relative;
+.games {
     margin-top: 20px;
-    height: 300px;
+    height: 350px;
     justify-content: center;
 
 }
@@ -47,12 +45,9 @@ main article {
 
 .games span{
     font-size: 20px;
-    opacity: 1;
-    transition: opacity 0.5s;
 }
 
 .games button{
-    position: absolute;
     padding: 5px;
     background-color: rgb(59, 154, 255);
     border: none;
@@ -60,17 +55,26 @@ main article {
     font-size: 20px;
     left: 0;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.5s;
+    opacity: 1;
     bottom: 0;
     width: 100%;
 }
 
-.games:hover{
-    transform: scale(1.1)
-}
+.checkbox label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+  }
 
-main aside {
-    grid-area: sidebar;
-    background-color: #45aaf2;
-}
+
+.left-column-filter > button{
+    background-color: red;
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+}   
