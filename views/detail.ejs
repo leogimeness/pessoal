@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css','header.css','footer.css','detail.css',]}) %>
+
+<body>
+    
+<%- include('parts/header.ejs') %>
+
+<main>
+
+  <section class ='product-detail'>
+
+    
+      <div class="product-gallery">
+        <img src="product-image-1.jpg" alt="Product Image 1">
+      </div>
+
+
+      <div class="product-info">
+        <h6>Nintendo Switch</h6>
+        <h1>Product Name</h1>
+        <p></p>
+        <span>RS$99</span>
+        <a href="#" class="get-now-btn">Get it Now!</a>
+          
+      </div>
+
+
+
+  </section>
+    
+
+</main>
+
+<%- include("parts/footer.ejs") %>
+
+</body>
+</html>
