@@ -12,7 +12,9 @@ const paginasController = {
     },
     showCart:(req,res) =>{
         res.render('cart.ejs')
-
+    },
+    showProduct:(req,res) =>{
+        res.render('products.ejs')
     }
 
 }
