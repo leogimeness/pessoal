@@ -9,6 +9,8 @@ overflow: auto;
 }
 
 .sidebar a {
+font-weight: 1000;
+font-size: 30px;
 display: block;
 color: black;
 padding: 16px;
@@ -16,13 +18,13 @@ text-decoration: none;
 }
 
 .sidebar a.active {
-background-color: #04AA6D;
+background-color: lightblue;
 color: white;
 }
 
 
 .sidebar a:hover:not(.active) {
-background-color: #555;
+background-color: lightcoral;
 color: white;
 }
 

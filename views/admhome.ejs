@@ -4,24 +4,35 @@
 <%- include("parts/head", {css:['global.css',"adminHeader.css"]}) %>
 
 
-<Header>
-
-    <div class="sidebar">
-        <a class="active" href="#home">Home</a>
-        <a href="/adm/produtos">Produtos</a>
-        <a href="/adm/dashboard">Dashboard</a>
-        <a href="/adm/orders">Orders</a>
-        <a href="/adm/analytics">Analytics</a>
-    </div>
-
-</Header>
-
+<%- include("parts/admHeader.ejs") %>
 
 <body>
 
     <div class="content">
 
-        
+        <div class="boxes">
+            <h2>Total Income</h2>
+            <span>$40000</span>
+        </div>
+
+        <div class="boxes">
+            <h2>New Orders</h2>
+            <span>$40000</span>
+            
+        </div>
+
+        <div class="boxes">
+            <h2>New Users</h2>
+            <span>$40000</span>
+            
+        </div>
+
+        <div class="boxes">
+            <h2>Total Expenses</h2>
+            <span>$40000</span>
+            
+        </div>
+
     </div>
     
 </body>
