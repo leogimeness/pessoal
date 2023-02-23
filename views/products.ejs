@@ -11,48 +11,54 @@
 
 <main>
 
-    <section class="product-container">
+    <section class="product-container">    
 
     <div class="left-column-filter">
+
+    <form action="/products/<%= categoryID %>" method="GET">
+
 			<h2>Category</h2>
             <div class="dropdown">
                 <span>Price</span>
                 <i class="fa-solid fa-sort-down"></i>
+                
                 <div class="checkbox">
-                    <label>R$0 - R$50<input type="checkbox"></label>
-                    <label>R$50 +<input type="checkbox"></label>
+                    <label>R$0 - R$50</label><input type="checkbox" name ="price" value ="50">
+                    <label>R$50 +</label><input type="checkbox" name ="price" value ="51">
                 </div>
             </div>
 
         <div class="dropdown">
             <span>Genre</span>
             <i class="fa-solid fa-sort-down"></i>
+
             <div class="checkbox">
-                <label>RPG<input type="checkbox"></label>
-                <label>SPORT<input type="checkbox"></label>
-                <label>RACE<input type="checkbox"></label>
-                <label>OTHERS<input type="checkbox"></label>
+                <label>RPG</label><input type="checkbox">
+                <label>SPORT</label><input type="checkbox">
+                <label>RACE</label><input type="checkbox">
+                <label>OTHERS</label><input type="checkbox">
             </div>
         </div>
 
         <div class="dropdown">
             <span>Console</span>
             <i class="fa-solid fa-sort-down"></i>
+
             <div class="checkbox">
-                <label>SWITCH<input type="checkbox"></label>
+                <label>SWITCH</label><input type="checkbox">
             </div>
         </div>
 
-        <button>Apply Filters</button>
+        <button type = 'submit'>Apply Filters</button>
 
-
+    </form>
 
 
     </div>
 		
     <div class="right-column-products">
         
-        
+
         <% for (produto of produtosFiltrados){ %>
 
             <div class="games">
@@ -60,14 +66,13 @@
                 <a href="/detail/<%= produto.id%>">
                     <img src="/img/jogos/<%= produto.img %>" alt="">
                     <h2><%=produto.nome%></h2>
-                    <span><%= produto.price %></span>
+                    <span>$<%= produto.price %></span>
                 </a>
                 
                 <button>Add to Cart</button>
 
             </div>
 
-        
         <%}%>
 
     
