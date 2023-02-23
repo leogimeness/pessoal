@@ -15,6 +15,7 @@ router.get('/detail/:idProduto',paginasController.showProductDetail)
 
 
 router.get('/adm',admController.showHome)
+router.get('/adm/produtos',admController.listarProdutos);
 
 
 module.exports = router 
