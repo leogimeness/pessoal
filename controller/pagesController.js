@@ -23,8 +23,27 @@ const paginasController = {
         let categoryID = Number(req.params.category)
         let produtosFiltrados = produtos.filter(p => p.categoryID.includes(categoryID))
         let price = req.query.price
+        let genre = req.query.genre
 
-        if (price != undefined){
+        if (genre !== undefined){
+            switch(genre){
+
+                case "Rpg": produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Rpg")
+                break;
+                case "Sport":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Sport")
+                break;
+                case "Adventure":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Adventure")
+                break;
+                case "Race":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Race")
+                break;
+                case "Fight":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Fight")
+                break;
+                default:
+
+            }
+        }
+
+        if (price !== undefined){
         switch(price){
 
             case "50": produtosFiltrados = produtosFiltrados.filter(p => p.price <= 50)
@@ -34,7 +53,6 @@ const paginasController = {
             break;
 
             default:
-
         }}
 
         res.render('products.ejs',{produtosFiltrados,categoryID});
