@@ -21,14 +21,21 @@ const paginasController = {
     showProduct:(req,res) =>{
 
         let categoryID = Number(req.params.category)
-
         let produtosFiltrados = produtos.filter(p => p.categoryID.includes(categoryID))
-
         let price = req.query.price
 
-        if (price != undefined){ //switch
-            produtosFiltrados = produtosFiltrados.filter(p => p.price <= 50)
-        }
+        if (price != undefined){
+        switch(price){
+
+            case "50": produtosFiltrados = produtosFiltrados.filter(p => p.price <= 50)
+            break;
+
+            case "51": produtosFiltrados = produtosFiltrados.filter(p => p.price > 50)
+            break;
+
+            default:
+
+        }}
 
         res.render('products.ejs',{produtosFiltrados,categoryID});
     },
