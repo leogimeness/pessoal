@@ -2,7 +2,7 @@
     {
         "id":"1",
         "nome":"Pokémon™ Scarlet",
-        "genre":"RPG",
+        "genre":"Rpg",
         "price":59.99,
         "img":["PokemonScarlet.avif"],
         "categoryID":"1",
@@ -13,7 +13,7 @@
     {
         "id":"2",
         "nome":"MARIO + RABBIDS SPARKS OF HOPE",
-        "genre":"RPG",
+        "genre":"Rpg",
         "price":44.99,
         "img":["mario.avif"],
         "categoryID":"1",
@@ -46,7 +46,7 @@
     {
         "id":"5",
         "nome":"Assassin's Creed Anniversary Edition Mega Bundle",
-        "genre":"RPG",
+        "genre":"Rpg",
         "price":64.99,
         "img":["assignscreed.avif"],
         "categoryID":"1",
@@ -79,7 +79,7 @@
     {
         "id":"8",
         "nome":"The Witcher 3: Wild Hunt — Complete Edition",
-        "genre":"RPG",
+        "genre":"Rpg",
         "price":29.99,
         "img":["theWatcher.jfif"],
         "categoryID":"1",
@@ -156,7 +156,7 @@
     {
         "id":"15",
         "nome":"DARK SOULS™: REMASTERED",
-        "genre":"RPG",
+        "genre":"Rpg",
         "price":39.99,
         "img":[""],
         "categoryID":"1",
