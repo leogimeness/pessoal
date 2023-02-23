@@ -5,7 +5,12 @@
     },
     {
         "id":2,
-        "categoria":"merchandise"
+        "categoria":"shirts"
+    }
+    ,
+    {
+        "id":3,
+        "categoria":"toys"
     }
     
 ]

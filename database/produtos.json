@@ -7,7 +7,8 @@
         "img":["PokemonScarlet.avif"],
         "categoryID":"1",
         "NewReleased": true,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"2",
@@ -17,7 +18,8 @@
         "img":["mario.avif"],
         "categoryID":"1",
         "NewReleased":true,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"3",
@@ -27,7 +29,8 @@
         "img":["fifa23.jfif"],
         "categoryID":"1",
         "NewReleased":true,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"4",
@@ -37,17 +40,19 @@
         "img":["amongus.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"5",
         "nome":"Assassin's Creed Anniversary Edition Mega Bundle",
         "genre":"RPG",
         "price":"$64.99",
-        "img":["assingscreed.avif"],
+        "img":["assignscreed.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"6",
@@ -57,7 +62,8 @@
         "img":["sonic.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"7",
@@ -67,7 +73,8 @@
         "img":["mariokartdeluxe.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"8",
@@ -77,7 +84,8 @@
         "img":["theWatcher.jfif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"9",
@@ -87,7 +95,8 @@
         "img":["residentEvil4.webp"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"10",
@@ -97,7 +106,8 @@
         "img":["zeldaKingdom.avif"],
         "categoryID":"1",
         "NewReleased":true,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"11",
@@ -107,7 +117,8 @@
         "img":["zeldaSkySword.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"12",
@@ -117,7 +128,8 @@
         "img":["superSmashBross.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"13",
@@ -127,7 +139,8 @@
         "img":["luigeMansion.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"14",
@@ -137,7 +150,8 @@
         "img":["starwars.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"15",
@@ -147,7 +161,8 @@
         "img":[],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"16",
@@ -157,7 +172,8 @@
         "img":["zeldaBreathOfWild.avif"],
         "categoryID":"1",
         "NewReleased":true,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"17",
@@ -167,7 +183,8 @@
         "img":["pokeminBrillant.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":true
+        "Promotion":true,
+        "type":"Switch"
     },
     {
         "id":"18",
@@ -177,7 +194,8 @@
         "img":["MLB.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"19",
@@ -187,7 +205,8 @@
         "img":["rocketleague.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
     {
         "id":"20",
@@ -197,7 +216,8 @@
         "img":["mariogolf.avif"],
         "categoryID":"1",
         "NewReleased":false,
-        "Promotion":false
+        "Promotion":false,
+        "type":"Switch"
     },
 
 
@@ -209,7 +229,8 @@
         "img":["2022-sweater-front-1200x675.avif"],
         "categoryID":"2",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"23",
@@ -219,7 +240,8 @@
         "img":["zeldaShirt.avif"],
         "categoryID":"2",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"23",
@@ -229,7 +251,8 @@
         "img":["marioshirt.avif"],
         "categoryID":"2",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"24",
@@ -239,7 +262,8 @@
         "img":["2022-sweater-front-1200x675.avif"],
         "categoryID":"2",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"25",
@@ -247,9 +271,10 @@
         "genre":"",
         "price":"$29.99",
         "img":["117733-hallmark-bowser-kart-ornament-front-1200x675.avif"],
-        "categoryID":"2",
+        "categoryID":"3",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"26",
@@ -257,9 +282,10 @@
         "genre":"",
         "price":"$39.99",
         "img":["117734-hallmark-mario-tanooki-ornament-front-1200x675.avif"],
-        "categoryID":"2",
+        "categoryID":"3",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"27",
@@ -267,9 +293,10 @@
         "genre":"",
         "price":"$39.99",
         "img":["117731-hallmark-loz-link-ornament-front-1200x675.avif"],
-        "categoryID":"2",
+        "categoryID":"3",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"28",
@@ -277,9 +304,10 @@
         "genre":"Adventure",
         "price":"$9.99",
         "img":["117735-hallmark-yoshi-ornament-front-1200x675.avif"],
-        "categoryID":"2",
-        "NewReleased":false,
-        "Promotion":true
+        "categoryID":"3",
+        "NewReleased":"",
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"29",
@@ -287,9 +315,10 @@
         "genre":"",
         "price":"$39.99",
         "img":["115972-super-mario-piranha-plant-poseable-lamp-1200x675.avif"],
-        "categoryID":"2",
+        "categoryID":"3",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     },
     {
         "id":"30",
@@ -297,8 +326,9 @@
         "genre":"",
         "price":"$19.99",
         "img":["115640-tree-topper-zelda-package-2000x2000.avif"],
-        "categoryID":"2",
+        "categoryID":"3",
         "NewReleased":"",
-        "Promotion":""
+        "Promotion":"",
+        "type":"Merchandise"
     }
 ]
