@@ -1,3 +1,5 @@
+const produtos = require('../database/produtos.json')
+
 
 const paginasController = {
 
@@ -14,10 +16,25 @@ const paginasController = {
         res.render('cart.ejs')
     },
     showProduct:(req,res) =>{
-        res.render('products.ejs')
+
+        let categoryID = Number(req.params.category)
+
+        let produtosFiltrados = produtos.filter(p => p.categoryID.includes(categoryID))
+
+        res.render('products.ejs',{produtosFiltrados});
     },
+
     showProductDetail:(req,res) =>{
-        res.render('detail.ejs')
+
+        let id = req.params.idProduto;
+
+        let produto = produtos.find(p => p.id == id)
+
+        if(produto !== undefined){
+            res.render('detail.ejs',{produto})
+        }else{
+            res.render('error404.ejs')
+        }
     }
 
 }
