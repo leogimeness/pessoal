@@ -1,0 +1,35 @@
+main {
+    width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    filter: blur(0.5);
+}
+#tabela-de-produtos {
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+#tabela-de-produtos tbody td {
+ 
+    border: 1px solid #666;
+    padding: 5px;
+}
+#tabela-de-produtos td:nth-child(1){
+    width: 30px;
+}
+#tabela-de-produtos td:nth-child(2){
+    width: 100px;
+}
+
+#tabela-de-produtos img {
+    width: 100%;
+    display: block;
+}
+.bt {
+    text-decoration: none;
+    background-color: #DDD;
+    color: black;
+    padding: 6px;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("parts/head", {css:['global.css',"adminHeader.css","adminProdutos.css"]}) %>
+
+<body>
+    
+    <%- include("parts/admHeader.ejs") %>
+   
+    <main>
+        
+        <a class ="bt" href="/adm/produtos/create">Adicionar Novo Produto</a><br>
+        
+        <table id="tabela-de-produtos">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Imagem</td>
+                    <td>Nome</td>
+                    <td>Preço</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for(let mercadoria of mercadorias){ %>
+
+                    <tr>
+                            <td><%= mercadoria.id %></td>
+                            <td><img src="<%= mercadoria.img %>" alt="<%= mercadoria.nome %>"></td>
+                            <td><%= mercadoria.nome %></td>
+                            <td>R$<%= mercadoria.preco %></td>
+                            <td>
+                                <a class="bt" href="/adm/produtos<%= mercadoria.id %>/edit">Editar</a>
+                                <a class="bt" href="#">Remover</a>
+                            </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
