@@ -2,13 +2,14 @@
 <html lang="en">
 
 
-<%- include("parts/head", {css:['global.css',"adminHeader.css","adminProdutos.css"]}) %>
+<%- include("parts/head", {css:['global.css',"admHeader.css","admProdutos.css"]}) %>
 
-<body>
-    
-    <%- include("parts/admHeader.ejs") %>
+
+<%- include("parts/admHeader.ejs") %>
+
+<body>  
    
-    <main>
+    <div class="content">
         
         <a class ="bt" href="/adm/produtos/create">Adicionar Novo Produto</a><br>
         
@@ -28,9 +29,9 @@
 
                     <tr>
                             <td><%= mercadoria.id %></td>
-                            <td><img src="<%= mercadoria.img %>" alt="<%= mercadoria.nome %>"></td>
+                            <td><img src="/img/jogos/<%= mercadoria.img %>" alt="<%= mercadoria.nome %>"></td>
                             <td><%= mercadoria.nome %></td>
-                            <td>R$<%= mercadoria.preco %></td>
+                            <td><%= mercadoria.price == 0 ? "Free" : mercadoria.price %></td>
                             <td>
                                 <a class="bt" href="/adm/produtos<%= mercadoria.id %>/edit">Editar</a>
                                 <a class="bt" href="#">Remover</a>
@@ -41,6 +42,6 @@
 
             </tbody>
         </table>
-    </main>
+    </div>
 </body>
 </html>
