@@ -118,7 +118,7 @@
                 <a href="/detail/<%= mercadorias[i].id%>">
                     <img src="/img/jogos/<%= mercadorias[i].img %>" alt="">
                     <h2><%= mercadorias[i].nome %></h2>
-                    <span>$<%= mercadorias[i].price %></span>
+                    <span>$<%= mercadorias[i].price == "0" ? "Free" : mercadorias[i].price%></span>
                     <span class = "discount">10% at the checkout</span>
                 </a>
                 <button>Add to Cart</button>
