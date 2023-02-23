@@ -1,59 +1,9 @@
-header .top{
-    display: grid;
-    grid-template-columns: 20% 50% 30%;
-    padding: 20px 100px;
-    align-items: center;
-}
-
-header .top img{
-    padding: 0px;
-    width: 100px;
-}
-
-header .search{
-    position: relative;
-}
-
-header .search input{
-    border: solid 1px #c1c1c1;
-    width: 90%;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 22px;
-}
-
-header .search button{
-
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    color: #c1c1c1;
-    right:17px;
-    top: 50%;
-    margin-top: -16px;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #c1c1c1;
-}
-
-header .userMenu{
-    padding-left: 20px;
-    display:grid;
-    grid-template-columns: 100px 100px;
-    gap: 50px;
-    font-size: 20px;
-}
-
 header #menu{
     background-color: rgb(255, 23, 54);
     padding: 0px 100px;
     display: grid;
     grid-template-columns: 70% 30%;
-    gap:20px;
-    height: 60px;
-
+    height: 80px;
 }
 
 header .navbar{
@@ -64,18 +14,14 @@ header .navbar{
     gap:50px;
 }
 
+header .navbar img{
+    width: 100px;
+}
+
+
 header .titulos{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 15px;
-}
-
-header .titulos:hover{
-    color: #fff;
-}
-
-header .navbar .dropdown{
-    position: relative;
 }
 
 header .navbar .dropdown .dropdown-content{
@@ -104,19 +50,54 @@ header .dropdown-content a{
     border: 1px solid black;
 }
 
-header .dropdown-content a:hover{
-    background-color: #ddd;
+
+header .search{
+    position: relative;
 }
 
-header .logos{
+header .search input{
+    border: solid 1px #c1c1c1;
+    width: 350px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+header .search button{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: #c1c1c1;
+    right:17px;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #c1c1c1;
+}
+
+header .userMenu{
     display: flex;
     justify-content:center;
     align-items: center;
+    padding-left: 20px;
+    gap: 30px;
+    font-size: 20px;
 }
 
-header .logos a{
-    font-size: 20px;
-    padding-left:5px ;
+header .titulos:hover{
+    color: #fff;
+}
+
+header .navbar .dropdown{
+    position: relative;
+}
+
+
+header .dropdown-content a:hover{
+    background-color: #ddd;
 }
 
 header a {
@@ -124,13 +105,8 @@ header a {
     color: black;
 }
 
-
-.logos a:hover{
-    color: white;
-}
-
 .userMenu > a:hover{
-    color: rgb(255, 23, 54);
+    color: white;
 }
 
 .nav
