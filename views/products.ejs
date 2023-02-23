@@ -13,7 +13,7 @@
 
     <section class="product-container">
 
-		<div class="left-column-filter">
+    <div class="left-column-filter">
 			<h2>Category</h2>
             <div class="dropdown">
                 <span>Price</span>
@@ -50,30 +50,28 @@
 
     </div>
 		
-        <div class="right-column-products">
-			
+    <div class="right-column-products">
+        
+        
+        <% for (produto of produtosFiltrados){ %>
+
             <div class="games">
-                <a href="/detail">
-                    <img src="/img/jogos/PokemonScarlet.avif" alt="">
-                    <h2>Pokémon™ Scarlet</h2>
-                    <span>R$ 0,00</span>
+
+                <a href="/detail/<%= produto.id%>">
+                    <img src="/img/jogos/<%= produto.img %>" alt="">
+                    <h2><%=produto.nome%></h2>
+                    <span><%= produto.price %></span>
                 </a>
                 
                 <button>Add to Cart</button>
+
             </div>
+
+        
+        <%}%>
+
     
-            <div class="games">
-                <a href="">
-                    <img src="/img/jogos/mario.avif" alt="">
-                    <h2>Mario + Rabbids Sparks Of Hope</h2>
-                    <span>R$ 0,00</span>
-                </a>
-
-                <button>Add to Cart</button>
-            </div>
-
-		
-        </div>
+    </div>
 
 
 	</section>
