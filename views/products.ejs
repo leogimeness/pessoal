@@ -17,42 +17,31 @@
 
     <form action="/products/<%= categoryID %>" method="GET">
 
-			<h2>Category</h2>
-            <div class="dropdown">
-                <span>Price</span>
-                <i class="fa-solid fa-sort-down"></i>
-                
-                <div class="checkbox">
-                    <label>R$0 - R$50</label><input type="checkbox" name ="price" value ="50">
-                    <label>R$50 +</label><input type="checkbox" name ="price" value ="51">
-                </div>
-            </div>
-
+        <h2>Category</h2>
         <div class="dropdown">
-            <span>Genre</span>
-            <i class="fa-solid fa-sort-down"></i>
+            <span>Price</span>
 
             <div class="checkbox">
-                <label>RPG</label><input type="checkbox">
-                <label>SPORT</label><input type="checkbox">
-                <label>RACE</label><input type="checkbox">
-                <label>OTHERS</label><input type="checkbox">
+                <label>R$0 - R$50</label><input type="checkbox" name ="price" value ="50">
+                <label>R$50 +</label><input type="checkbox" name ="price" value ="51">
             </div>
         </div>
 
         <div class="dropdown">
-            <span>Console</span>
-            <i class="fa-solid fa-sort-down"></i>
+            <span>Genre</span>
 
             <div class="checkbox">
-                <label>SWITCH</label><input type="checkbox">
+                <label>Rpg</label><input type="checkbox" name="genre" value ="Rpg">
+                <label>Sport</label><input type="checkbox" name="genre" value ="Sport">
+                <label>Adventure</label><input type="checkbox" name="genre" value ="Adventure">
+                <label>Race</label><input type="checkbox" name="genre" value ="Race">
+                <label>Fight</label><input type="checkbox" name="genre" value ="Fight">
             </div>
         </div>
 
         <button type = 'submit'>Apply Filters</button>
 
     </form>
-
 
     </div>
 		
@@ -66,7 +55,7 @@
                 <a href="/detail/<%= produto.id%>">
                     <img src="/img/jogos/<%= produto.img %>" alt="">
                     <h2><%=produto.nome%></h2>
-                    <span>$<%= produto.price %></span>
+                    <span>$<%= produto.price == 0 ? "Free" : produto.price %></span>
                 </a>
                 
                 <button>Add to Cart</button>
@@ -74,14 +63,10 @@
             </div>
 
         <%}%>
-
     
     </div>
 
-
 	</section>
-
-
 </main>
     
 <%- include("parts/footer.ejs") %>
