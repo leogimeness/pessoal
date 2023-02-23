@@ -201,7 +201,7 @@
         "id":"19",
         "nome":"Rocket League®",
         "genre":"Sport",
-        "price":"Free",
+        "price":"0",
         "img":["rocketleague.avif"],
         "categoryID":"1",
         "NewReleased":false,
