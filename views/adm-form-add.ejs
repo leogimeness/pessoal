@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css',"admHeader.css","adm-form-add.css"]}) %>
+
+<%- include("parts/admHeader.ejs") %>
+
+
+<body>
+    
+    <main>
+    <form action="/adm/produtos/store" method="post" enctype="multipart/form-data">
+
+        <label for="product-name">Product Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="genre">Genre:</label>
+		<select id="genre" name="genre" required>
+			<option value="">-- Select Genre --</option>
+			<option value="Rpg">Rpg</option>
+			<option value="Sport">Sport</option>
+			<option value="Race">Race</option>
+			<option value="Fight">Fight</option>
+            <option value="Adventure">Adventure</option>
+		</select>
+
+		<label for="category">Product Category:</label>
+		<select id="category" name="	" required>
+			<option value="">-- Select Category --</option>
+			<option value="1">Games</option>
+			<option value="3">Toys</option>
+			<option value="2">Shirts</option>
+		</select>
+
+        <label>
+            Price:
+            <input type="number" name="price" id="price" step="0.01" placeholder="Digite o preço">
+        </label>
+
+        <div class="flex-container">
+
+			<label for="type">Type:</label>
+			<div class="radio-group">
+				<input type="radio" value="switch" name="type">
+				<label class="radio-label">switch</label>
+				<input type="radio" value="merchandise" name="type">
+				<label class="radio-label">merchandise</label>
+			</div>
+
+			<label for="promotion">In Promotion:</label>
+			<div class="radio-group">
+				<input type="radio" value="true" name="promotion">
+				<label class="radio-label">True</label>
+				<input type="radio" value="false" name="promotion">
+				<label class="radio-label">False</label>
+			</div>
+
+
+			<label for="released">New Released:</label>
+			<div class="radio-group">
+				<input type="radio" value="true" name="released">
+				<label class="radio-label">True</label>
+				<input type="radio" value="false" name="released">
+				<label class="radio-label">False</label>
+			</div>
+		</div>
+
+        <label>
+            Photo:
+
+            <div>Clique para selecione nova imagem</div>
+            <input type="file" name="imagem" id="img">
+        </label>
+
+        <button type="submit">Salvar</button>
+
+
+
+
+    </form>
+
+    </main>
+
+</body>
+
+
+
+</html>
