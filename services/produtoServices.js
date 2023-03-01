@@ -1,4 +1,4 @@
-const produtos = require('../databases/produtos.json');
+const produtos = require('../database/produtos.json');
 const fs = require('fs');
 const path = require('path');
 
@@ -16,13 +16,13 @@ function loadProduto(idDoProduto){
 }
 
 function addProduto(produto){
-   
+
     if (produtos.length > 0){
-    produto.id = produto[produtos.length -1].id + 1;
+    produto.id = parseInt(produtos[produtos.length -1].id) + 1;
     } else{
         produto.id = 1;
     }
-   
+    
     produtos.push(produto);
 
     save();
@@ -53,9 +53,8 @@ function editProduto(idDoProduto, produtoInfo){
 
 }
 
-
 function save(){
-    const filePath = path.resolve(__dirname + "/../databases/produtos.json");
+    const filePath = path.resolve(__dirname + "/../database/produtos.json");
     fs.writeFileSync(filePath, JSON.stringify(produtos, null, 4));
 }
 
@@ -68,4 +67,4 @@ const produtoServices = {
     editProduto,
 }
 
-module.exports = PizzasServices;
+module.exports = produtoServices;
