@@ -1,14 +1,16 @@
 const express = require('express');
 const path = require('path')
 const app = express();
+const logMiddleWare = require("./middlewares/logSite")
 
 
 const router = require('./router');
 
+app.set('model view engine','ejs')
 
 app.use(express.static(path.join(__dirname, 'public')))
-
-app.set('model view engine','ejs')
+app.use(express.urlencoded({extended:false}));
+app.use(logMiddleWare)
 
 app.use(router)
 
