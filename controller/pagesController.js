@@ -21,7 +21,7 @@ const paginasController = {
     showProduct:(req,res) =>{
 
         let categoryID = Number(req.params.category)
-        let produtosFiltrados = produtos.filter(p => p.categoryID.includes(categoryID))
+        let produtosFiltrados = produtos.filter(p => p.categoryID  == categoryID)
         let price = req.query.price
         let genre = req.query.genre
 
