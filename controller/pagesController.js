@@ -23,24 +23,11 @@ const paginasController = {
         let categoryID = Number(req.params.category)
         let produtosFiltrados = produtos.filter(p => p.categoryID  == categoryID)
         let price = req.query.price
-        let genre = req.query.genre
+        let genres = req.query.genre
 
-        if (genre !== undefined){
-            switch(genre){
 
-                case "Rpg": produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Rpg")
-                break;
-                case "Sport":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Sport")
-                break;
-                case "Adventure":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Adventure")
-                break;
-                case "Race":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Race")
-                break;
-                case "Fight":produtosFiltrados = produtosFiltrados.filter(p => p.genre == "Fight")
-                break;
-                default:
-
-            }
+        if  (genres && genres.length > 0) {
+            produtosFiltrados = produtosFiltrados.filter(p => genres.includes(p.genre));
         }
 
         if (price !== undefined){
@@ -71,8 +58,5 @@ const paginasController = {
     }
 
 }
-
-
-
 
 module.exports = paginasController;
