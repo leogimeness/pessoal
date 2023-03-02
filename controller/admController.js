@@ -27,9 +27,32 @@ const admController = {
             promotion:req.body.promotion,
             type:req.body.type  
         }
-        console.log(produto)
+
 
         produtoServices.addProduto(produto)
+
+        res.redirect("/adm/produtos")
+    },
+    editProduct:(req,res)=>{
+
+        let id = req.params.id
+        let produto = produtos.find(p => p.id == id)
+
+        res.render('adm-form-edit.ejs',{produto})
+    },
+    updateProduct:(req,res) =>{
+        
+        console.log(req.body)
+
+        let id = req.params.id
+        let produto = produtos.find(p => p.id == id)
+
+        
+
+        // produto.nome = req.body.name;
+
+        // console.log(produtos)
+        // produtoServices.save()
 
         res.redirect("/adm/produtos")
     }
