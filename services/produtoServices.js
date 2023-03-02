@@ -34,7 +34,7 @@ function removeProduto(idDoProduto){
         throw new Error("Pizza inexistente");
     }
     produtos.splice(posicao, 1);
-    salvar();
+    save();
 }
 
 function editProduto(idDoProduto, produtoInfo){
@@ -49,7 +49,7 @@ function editProduto(idDoProduto, produtoInfo){
     produto.price = produtoInfo.price;
     produto.categoryId = produtoInfo.categoryId;
 
-    salvar();
+    save();
 
 }
 
@@ -65,6 +65,7 @@ const produtoServices = {
     addProduto,
     removeProduto,
     editProduto,
+    save
 }
 
 module.exports = produtoServices;
