@@ -1,5 +1,12 @@
 const produtos = require('../database/produtos.json')
+
+const usuarios = require('../database/usuarios.json')
+
 const produtoServices = require('../services/produtoServices.js')
+const { save } = require('../services/usuarios.Services')
+
+const usuariosServices = require("../services/usuarios.Services")
+
 
 const admController = {
 
@@ -47,15 +54,49 @@ const admController = {
         let id = req.params.id
         let produto = produtos.find(p => p.id == id)
 
-        
+        produto.nome = req.body.nome;
+        produto.genre = req.body.genre;
+        produto.categoryID = req.body.category;
+        produto.price = req.body.price;
+        produto.type = req.body.type;
+        produto.Promotion = req.body.promotion;
+        produto.NewReleased = req.body.released
+        produto.img =  req.body.img
 
-        // produto.nome = req.body.name;
-
-        // console.log(produtos)
-        // produtoServices.save()
+        produtoServices.save(produtos)
 
         res.redirect("/adm/produtos")
+    },
+    deleteProduct:(req,res) => {
+
+        const productId = req.params.id;
+
+        const index = produtos.findIndex((mercadoria) => mercadoria.id === productId);
+        if (index !== -1) {
+          produtos.splice(index, 1);
+        }
+
+        produtoServices.save(produtos)
+
+        res.redirect('/adm/produtos')
+    },
+    listarUsuarios:(req,res)=>{
+        res.render('admUsuarios.ejs',{usuarios})
+    },
+    addUsuario:(req,res) =>{
+        res.render()
     }
+//     saveUsuario:(req,res)=>{
+
+//         let usuario = {
+//             email:req.body.email,
+//             phoneNumber: req.body.phoneNumber,
+//             password:req.body.password,
+//         }
+
+//     },
+  
+//     
 }
 
 

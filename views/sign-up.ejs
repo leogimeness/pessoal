@@ -10,19 +10,19 @@
 
 <main>
 
-  <form class="row g-3" method = "post">
+  <form action = "adm/usuarios/store" class="row g-3" method = "post">
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label><br>
-        <input type="text" class="form-control" id="email" >
+        <input name = "email" type="text" class="form-control" id="email" >
         <p id="textEmail"></p>
     </div>
     <div class="col-md-6">
       <label for="phoneNumber" class="form-label">Phone Number</label><br>
-      <input type="text" class="form-control" id="inputPhoneNumber" >
+      <input name ="phoneNumber" type="text" class="form-control" id="inputPhoneNumber" >
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Password</label><br>
-      <input type="password" class="form-control" id="Password"> 
+      <input name ="password"type="password" class="form-control" id="Password"> 
       <p id="textPassword" style ="font-size: 10px; color: red;padding-top: 5px;"></p>
     </div>
     <div class="col-md-6">
@@ -32,23 +32,23 @@
     </div>
       <div class="col-md-6">
         <label for="cep" class="form-label">CEP</label><br>
-        <input type="text" class="form-control" id="cepInput">
+        <input name="cep" type="text" class="form-control" id="cepInput">
       </div>
       <div class="col-md-6">
         <label for="Rua" class="form-label">Rua</label><br>
-        <input type="text" class="form-control" id="ruaInput">
+        <input name="rua" type="text" class="form-control" id="ruaInput">
       </div>
       <div class="col-md-6">
         <label for="Bairro" class="form-label">Bairro</label><br>
-        <input type="text" class="form-control" id="bairroInput">
+        <input name ="bairro" type="text" class="form-control" id="bairroInput">
       </div>
       <div class="col-md-6">
         <label for="cidade" class="form-label">Cidade</label><br>
-        <input type="text" class="form-control" id="cidadeInput">
+        <input name="cidade" type="text" class="form-control" id="cidadeInput">
       </div>
       <div class="col-md-6">
         <label for="Estado" class="form-label">Estado</label><br>
-        <input type="select" class="form-control" id="estadoInput">
+        <input name = "estado" type="select" class="form-control" id="estadoInput">
       </div>
       </div>
       <div class="col-12">

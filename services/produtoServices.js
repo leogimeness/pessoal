@@ -53,7 +53,7 @@ function editProduto(idDoProduto, produtoInfo){
 
 }
 
-function save(){
+function save(produtos){
     const filePath = path.resolve(__dirname + "/../database/produtos.json");
     fs.writeFileSync(filePath, JSON.stringify(produtos, null, 4));
 }

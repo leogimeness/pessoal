@@ -30,11 +30,17 @@ router.get('/detail/:idProduto',paginasController.showProductDetail)
 
 
 router.get('/adm',admController.showHome)
+
 router.get('/adm/produtos',admController.listarProdutos);
 router.get('/adm/produtos/add',admController.addProdutos);
 router.post('/adm/produtos/store',upload.single('imagem'),admController.saveProduto);
 router.get('/adm/produtos/:id/edit',admController.editProduct);
-router.put('/adm/produtos/:id/edit',admController.updateProduct)
+router.put('/adm/produtos/:id/edit',upload.single('imagem'),admController.updateProduct);
+router.get('/adm/produtos/:id/delete',admController.deleteProduct)
+
+router.get("/adm/usuarios",admController.listarUsuarios);
+router.get('/adm/usuarios/add');
+// router.post("adm/usuarios/store",admController.saveUsuario);
 
 
 
