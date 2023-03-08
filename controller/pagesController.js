@@ -15,9 +15,6 @@ const paginasController = {
     showSignUp:(req,res) =>{
         res.render('sign-up.ejs')
     },
-    showCart:(req,res) =>{
-        res.render('cart.ejs')
-    },
     showProduct:(req,res) =>{
 
         let categoryID = Number(req.params.category)

@@ -19,22 +19,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <img src="product1.jpg" alt="Product 1">
-          <h2>Product 1</h2>
-        </td>
-        <td>$10.99</td>
-        <td>
-          <input type="number" value="1" min="1">
-        </td>
-        <td>$10.99</td>
-      </tr>
+     
+        <% if(cart != undefined) { %>
+          <% for (let item of cart) {%>
+          <tr>
+            <td>
+              <img src="/img/jogos/<%= item.img %>" alt="<%= item.nome %>">
+              <h2><%= item.nome %></h2>
+            </td>
+            <td><%= item.price %></td>
+            <td>
+              <input type="number" value="<%= item.quantity %>" min="1">
+            </td>
+            <td><%= item.total %></td>
+        </tr>
+          <% } %>
+        <%} else{%>
+            <h2>O carrinho esta vazio</h2>
+        <% } %>
+        
+     
     </tbody>
   </table>
 
   <div class="subtotal">
-    <p>Subtotal: $50.96</p>
+    <p>Subtotal:</p>
     <button>Checkout</button>
   </div>
 

@@ -3,6 +3,7 @@ const path = require('path')
 const app = express();
 const logMiddleWare = require("./middlewares/logSite")
 const methodOverride = require('method-override');
+const session = require('express-session')
 
 
 
@@ -15,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended:false}));
 app.use(logMiddleWare)
 app.use(methodOverride('_method'));
+app.use(session({ secret:"senha", resave:false,saveUninitialized:false}))
 
 app.use(router)
 

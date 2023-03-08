@@ -3,6 +3,7 @@ const path = require('path');
 const admController = require('./controller/admController');
 const paginasController = require('./controller/pagesController');
 const multer = require('multer');
+const cartController = require('./controller/cartController')
 
 const multerDiskStorage = multer.diskStorage({
     destination:(req,file,callback) =>{
@@ -23,12 +24,15 @@ const router = express.Router()
 router.get('/', paginasController.showIndex)
 router.get('/sign-in',paginasController.showAccount)
 router.get('/sign-up',paginasController.showSignUp)
-router.get('/cart',paginasController.showCart)
 router.get('/products/:category',paginasController.showProduct)
 router.get('/detail/:idProduto',paginasController.showProductDetail)
 
+// produtos
+router.get('/cart',cartController.showCart)
+router.get('/addInCart/:id',cartController.addCart)
 
 
+// adm crud 
 router.get('/adm',admController.showHome)
 
 router.get('/adm/produtos',admController.listarProdutos);

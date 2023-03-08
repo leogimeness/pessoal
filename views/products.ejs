@@ -59,7 +59,7 @@
                     <span>$<%= produto.price == 0 ? "Free" : produto.price %></span>
                 </a>
                 
-                <button>Add to Cart</button>
+                <a href="/addInCart/<%= produto.id %>"><button>Add to Cart</button></a>
 
             </div>
 
