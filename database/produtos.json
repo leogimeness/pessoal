@@ -2,15 +2,13 @@
     {
         "id": "1",
         "nome": "Pokemon™ Scarlet",
-        "genre": "Rpg",
-        "price": 59.99,
-        "img": [
-            "PokemonScarlet.avif"
-        ],
+        "genre": "Adventure",
+        "price": "59.99",
+        "img": "1678290114303PokemonScarlet.avif",
         "categoryID": "1",
-        "NewReleased": true,
-        "Promotion": false,
-        "type": "Switch"
+        "NewReleased": "true",
+        "Promotion": "false",
+        "type": "switch"
     },
     {
         "id": "2",
@@ -279,19 +277,6 @@
         "price": 24.99,
         "img": [
             "marioshirt.avif"
-        ],
-        "categoryID": "2",
-        "NewReleased": "",
-        "Promotion": "",
-        "type": "Merchandise"
-    },
-    {
-        "id": "24",
-        "nome": "Yoshiiiiii - Youth Comfy T-Shirt",
-        "genre": "",
-        "price": 19.99,
-        "img": [
-            "2022-sweater-front-1200x675.avif"
         ],
         "categoryID": "2",
         "NewReleased": "",

@@ -3,9 +3,11 @@ const produtos = require('../database/produtos.json')
 const usuarios = require('../database/usuarios.json')
 
 const produtoServices = require('../services/produtoServices.js')
-const { save } = require('../services/usuarios.Services')
 
 const usuariosServices = require("../services/usuarios.Services")
+
+const fs = require('fs')
+
 
 
 const admController = {
@@ -48,8 +50,6 @@ const admController = {
         res.render('adm-form-edit.ejs',{produto})
     },
     updateProduct:(req,res) =>{
-        
-        console.log(req.body)
 
         let id = req.params.id
         let produto = produtos.find(p => p.id == id)
@@ -61,7 +61,7 @@ const admController = {
         produto.type = req.body.type;
         produto.Promotion = req.body.promotion;
         produto.NewReleased = req.body.released
-        produto.img =  req.body.img
+        produto.img =  req.file.filename;
 
         produtoServices.save(produtos)
 
@@ -84,19 +84,23 @@ const admController = {
         res.render('admUsuarios.ejs',{usuarios})
     },
     addUsuario:(req,res) =>{
-        res.render()
+        res.render('admUser-form-add.ejs')
+    },
+    saveUser:(req,res) =>{
+
+        let user = {
+            nome:req.body.name,
+            phoneNumber:req.body.phoneNumber,
+            email:req.body.email
+        }
+
+        usuariosServices.addUsuario(user)
+
+        res.redirect('/adm/usuarios')
+
+
     }
-//     saveUsuario:(req,res)=>{
 
-//         let usuario = {
-//             email:req.body.email,
-//             phoneNumber: req.body.phoneNumber,
-//             password:req.body.password,
-//         }
-
-//     },
-  
-//     
 }
 
 
