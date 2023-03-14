@@ -11,14 +11,24 @@
 <main>
 
   <form action = "adm/usuarios/store" class="row g-3" method = "post">
+
+    <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label><br>
+        <input name = "firstName" type="text" class="form-control" id="firstName" >
+    </div>
+    <div class="col-md-6">
+      <label for="lastName" class="form-label">Last Name</label><br>
+      <input name = "lastName" type="text" class="form-control" id="lastName" >
+
+  </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label><br>
-        <input name = "email" type="text" class="form-control" id="email" >
+        <input name = "email" type="text" class="form-control" id="email" placeholder="example@gmail.com">
         <p id="textEmail"></p>
     </div>
     <div class="col-md-6">
       <label for="phoneNumber" class="form-label">Phone Number</label><br>
-      <input name ="phoneNumber" type="text" class="form-control" id="inputPhoneNumber" placeholder="(xx) - xxxxx-xxxx" >
+      <input name ="phoneNumber" type="text" class="form-control" id="inputPhoneNumber" placeholder="(xx) xxxxx-xxxx" >
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Password</label><br>
@@ -30,7 +40,7 @@
       <input type="password" name="password2" class="form-control" id="Password2">
       <p id="textPassword2" style ="font-size: 10px; color: red;padding-top: 5px;"></p>
     </div>
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <label for="cep" class="form-label">CEP</label><br>
         <input name="cep" type="text" class="form-control" id="cepInput">
       </div>
@@ -57,7 +67,7 @@
       <label class="form-check-label" for="gridCheck">
         Enroll for newsletter
       </label>
-    </div> <br>
+    </div> <br> -->
   </div>
   
   <div class="col-12">
