@@ -45,6 +45,9 @@ router.get('/adm/produtos/:id/delete',admController.deleteProduct)
 router.get("/adm/usuarios",admController.listarUsuarios);
 router.get('/adm/usuarios/add',admController.addUsuario);
 router.post('/adm/usuarios/add',admController.saveUser);
+router.get("/adm/usuarios/:id/edit",admController.editUsuario);
+router.put("/adm/usuarios/:id/edit",admController.updateUsuario);
+router.get('/adm/usuarios/:id/delete',admController.deleteUsuario)
     
 
 
