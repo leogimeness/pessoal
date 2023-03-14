@@ -17,7 +17,11 @@ function addUsuario(usuario){
 
     if(usuarios.length > 0){
         usuario.id = parseInt(usuarios[usuarios.length -1].id) + 1
-    } usuario.id = 1;
+    } else{usuario.id = 1;}
+
+    usuarios.push(usuario)
+
+    save(usuarios)
 }
 
 function save(){
