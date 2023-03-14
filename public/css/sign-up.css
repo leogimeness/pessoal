@@ -1,11 +1,11 @@
 main {
     padding: 10px 100px;
+    
 }
 
 main form{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-   
+    grid-template-columns: 1fr 1fr;   
 }
 
 .col-md-6,.form-check{
