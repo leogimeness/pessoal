@@ -71,7 +71,7 @@ const admController = {
 
         const productId = req.params.id;
 
-        const index = produtos.findIndex((mercadoria) => mercadoria.id === productId);
+        const index = produtos.findIndex((mercadoria) => mercadoria.id == productId);
         if (index !== -1) {
           produtos.splice(index, 1);
         }
@@ -99,6 +99,41 @@ const admController = {
         res.redirect('/adm/usuarios')
 
 
+    },
+    editUsuario:(req,res) =>{
+
+        let id = req.params.id
+        let usuario = usuarios.find(u => u.id == id)
+
+        res.render('admUser-form-edit.ejs',{usuario})
+
+    },
+    updateUsuario:(req,res) =>{
+
+        let id = req.params.id
+        let usuario = usuarios.find(u => u.id == id)
+
+        usuario.nome = req.body.nome,
+        usuario.email = req.body.email,
+        usuario.phoneNumber = req.body.phoneNumber
+
+        usuariosServices.save(usuarios)
+
+        res.redirect('/adm/usuarios')
+
+    },
+    deleteUsuario: (req, res) => {
+        const usuarioId = req.params.id;
+        const index = usuarios.findIndex(user => user.id == usuarioId);
+    
+        if (index === -1) {
+            return res.status(404).send("User not found");
+        }
+    
+        usuarios.splice(index, 1);
+        usuariosServices.save(usuarios);
+    
+        return res.redirect("/adm/usuarios");
     }
 
 }
