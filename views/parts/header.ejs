@@ -35,7 +35,11 @@
 
     <div  class = userMenu>
 
-        <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In </a>
+        <% if(username == undefined) { %>
+            <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In  </a>
+      <% }else {  %> <i class="fa-solid fa-user"> <%= username %>  </i> <% } %>
+
+        
         <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
     
     </div>
