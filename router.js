@@ -30,7 +30,7 @@ router.get('/detail/:idProduto',paginasController.showProductDetail)
 
 //clientes
 
-router.get('/login/store',loginController.verifyAccount);
+router.post('/login/store',loginController.verifyAccount);
 
 
 // produtos

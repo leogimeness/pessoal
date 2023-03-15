@@ -7,7 +7,7 @@ const paginasController = {
 
         let mercadorias = produtos.filter(p => p.Promotion == true)
         res.render('index.ejs',{mercadorias})
-        
+
     },
     showAccount:(req,res) =>{
         res.render('sign-in.ejs')
