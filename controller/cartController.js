@@ -2,7 +2,7 @@ const produtos = require('../database/produtos.json')
 
 const cartController = {
     showCart:(req,res) =>{
-        res.render('cart.ejs',{cart:req.session.cart})
+        res.render('cart.ejs')
     },
     addCart:(req,res) =>{
         let id = req.params.id
