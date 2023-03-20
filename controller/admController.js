@@ -11,7 +11,9 @@ const fs = require('fs')
 
 
 const admController = {
-
+    login:(req,res)=>{
+        res.render('admLogin.ejs')
+    },
     showHome:(req,res) =>{
         res.render('admhome.ejs')
     },

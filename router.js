@@ -23,6 +23,7 @@ const upload = multer({storage: multerDiskStorage})
 
 const router = express.Router()
 
+router.get('/adm/login', admController.login)
 
 // adm crud Produtos
 router.get('/adm',admController.showHome)
