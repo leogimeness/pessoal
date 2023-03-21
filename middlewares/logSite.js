@@ -1,9 +1,9 @@
-const fs = require('fs')
+// const fs = require('fs')
 
-function logSite (req,res,next) {
-    fs.appendFileSync('log.txt',"Usuario entrou na url: " + req.url)
+// function logSite (req,res,next) {
+//     fs.appendFileSync('log.txt',"Usuario entrou na url: " + req.url)
 
-    next();
-}
+//     next();
+// }
 
-module.exports = logSite
+// module.exports = logSite
