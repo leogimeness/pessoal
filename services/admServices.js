@@ -29,11 +29,11 @@ function save(){
     fs.writeFileSync(filePath,JSON.stringify(admUsers,null,4))
 }
 
-const usuariosServices = {
+const admServices = {
     loadUsuarios,
     loadUsuario,
     addUsuario,
     save
 }
 
-module.exports = usuariosServices;
+module.exports = admServices;
