@@ -1,5 +1,9 @@
 <Header>
     <div class="sidebar">
+      <% if(admName){%>
+        <h2>Welcome <%= admName %></h2>
+      <% } %>
+
       <a href="/adm">Home</a>
       <div class="dropdown">
         <button class="dropbtn">Produtos</button>
