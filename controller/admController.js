@@ -1,6 +1,6 @@
 const produtos = require('../database/produtos.json')
 
-const admUsers = require('../database/usuarios.json')
+const admUsers = require('../database/admUsers.json')
 
 const produtoServices = require('../services/produtoServices.js')
 
@@ -102,21 +102,21 @@ const admController = {
     editUsuario:(req,res) =>{
 
         let id = req.params.id
-        let usuario = admUsers.find(u => u.id == id)
+        let userAdm = admUsers.find(u => u.id == id)
 
-        res.render('admUser-form-edit.ejs',{admUsers})
+        res.render('admUser-form-edit.ejs',{userAdm})
 
     },
     updateUsuario:(req,res) =>{
 
         let id = req.params.id
-        let usuario = admUsers.find(u => u.id == id)
+        let userAdm = admUsers.find(u => u.id == id)
 
-        usuario.nome = req.body.nome,
-        usuario.email = req.body.email,
-        usuario.phoneNumber = req.body.phoneNumber
+        userAdm.nome = req.body.nome,
+        userAdm.email = req.body.email,
+        userAdm.phoneNumber = req.body.phoneNumber
 
-        admServices.save(admUsers)
+        admServices.save(userAdm)
 
         res.redirect('/adm/usuarios')
 

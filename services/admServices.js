@@ -1,4 +1,4 @@
-const admUsers = require('../database/usuarios.json')
+const admUsers = require('../database/admUsers.json')
 const fs = require('fs');
 const path = require('path');
 
