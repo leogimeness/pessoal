@@ -1,4 +1,6 @@
 const produtos = require('../database/produtos.json')
+const usuarios = require("../database/usuarios.json")
+const usuariosServices = require("../services/usersServices.js")
 
 
 const paginasController = {
@@ -15,8 +17,20 @@ const paginasController = {
     showSignUp:(req,res) =>{
         res.render('sign-up.ejs')
     },
-    saveUser:(req,res) =>{
-        
+    saveRegisteredUser:(req,res) =>{
+        let user ={
+            firstName:req.body.firstName,
+            lastName:req.body.lastName,
+            email:req.body.email,
+            phoneNumber:req.body.phoneNumber,
+            password:req.body.password
+        }
+
+        usuariosServices.addUsuario(user)
+
+        res.redirect('/')
+
+
     },
     showProduct:(req,res) =>{
 

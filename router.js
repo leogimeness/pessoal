@@ -23,6 +23,9 @@ const upload = multer({storage: multerDiskStorage})
 
 const router = express.Router()
 
+
+
+
 router.get('/adm/login', admController.login)
 
 // adm crud Produtos
@@ -47,7 +50,7 @@ router.use('/',usernameOnViewSetter, cartOnViewSetter);
 router.get('/',paginasController.showIndex);
 router.get('/sign-in',paginasController.showAccount);
 router.get('/sign-up',paginasController.showSignUp);
-router.post('/sign-up',paginasController.saveUser)
+router.post('/sign-up',paginasController.saveRegisteredUser)
 router.get('/products/:category',paginasController.showProduct);
 router.get('/detail/:idProduto',paginasController.showProductDetail);
 

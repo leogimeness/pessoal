@@ -1,12 +1,10 @@
 [
-    {   
-        "name":"Leonardo",
-        "email":"leogimeness@Outlook.com",
-        "password":"123456"
-    },
-    {   
-        "name":"leo",
-        "email":"leo@gmail.com",
-        "password":"123456"
+    {
+        "firstName": "CRISTI",
+        "lastName": "Maetani",
+        "email": "leogimeness@Outlook.com",
+        "phoneNumber": "8555374357",
+        "password": "Senha123",
+        "id": 1
     }
 ]
