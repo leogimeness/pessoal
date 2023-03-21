@@ -89,6 +89,7 @@ const admController = {
 
         let user = {
             nome:req.body.name,
+            password:req.body.password,
             phoneNumber:req.body.phoneNumber,
             email:req.body.email
         }
@@ -113,6 +114,7 @@ const admController = {
         let userAdm = admUsers.find(u => u.id == id)
 
         userAdm.nome = req.body.nome,
+        userAdm.password = req.body.password,
         userAdm.email = req.body.email,
         userAdm.phoneNumber = req.body.phoneNumber
 
