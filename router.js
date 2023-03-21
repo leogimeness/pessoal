@@ -7,6 +7,8 @@ const cartController = require('./controller/cartController');
 const multer = require('multer');
 const usernameOnViewSetter = require('./middlewares/usernameOnViewSetter');
 const cartOnViewSetter = require('./middlewares/cartOnViewSetter');
+const { login } = require('./controller/admController');
+const admNameOnViewSetter = require('./middlewares/admNameOnViewSetter');
 
 const multerDiskStorage = multer.diskStorage({
     destination:(req,file,callback) =>{
@@ -25,8 +27,11 @@ const router = express.Router()
 
 
 
+router.use('/adm',admNameOnViewSetter)
 
+// adm login
 router.get('/adm/login', admController.login)
+router.post('/adm/login', loginController.verifyAdmAccount)
 
 // adm crud Produtos
 router.get('/adm',admController.showHome)
