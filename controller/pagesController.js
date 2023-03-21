@@ -18,6 +18,7 @@ const paginasController = {
         res.render('sign-up.ejs')
     },
     saveRegisteredUser:(req,res) =>{
+
         let user ={
             firstName:req.body.firstName,
             lastName:req.body.lastName,
@@ -30,7 +31,18 @@ const paginasController = {
 
         res.redirect('/')
 
+        // const {validationResult} =require('express-validator')
 
+        // let errors = validationResult(req)
+
+
+        // if (errors.isEmpty()){
+                
+            
+        // }else{
+        //     res.render('sign-up.ejs',{errors:errors.mapped(), old:req.body})
+        //     console.log(errors)
+        // }
     },
     showProduct:(req,res) =>{
 

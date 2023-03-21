@@ -9,6 +9,7 @@ const usernameOnViewSetter = require('./middlewares/usernameOnViewSetter');
 const cartOnViewSetter = require('./middlewares/cartOnViewSetter');
 const { login } = require('./controller/admController');
 const admNameOnViewSetter = require('./middlewares/admNameOnViewSetter');
+const signUpValidator = require('./middlewares/signUpValidator');
 
 const multerDiskStorage = multer.diskStorage({
     destination:(req,file,callback) =>{
@@ -55,7 +56,7 @@ router.use('/',usernameOnViewSetter, cartOnViewSetter);
 router.get('/',paginasController.showIndex);
 router.get('/sign-in',paginasController.showAccount);
 router.get('/sign-up',paginasController.showSignUp);
-router.post('/sign-up',paginasController.saveRegisteredUser)
+router.post('/sign-up',paginasController.saveRegisteredUser)//signUpValidator,
 router.get('/products/:category',paginasController.showProduct);
 router.get('/detail/:idProduto',paginasController.showProductDetail);
 
