@@ -25,15 +25,15 @@
             </thead>
             <tbody>
 
-                <% for(let usuario of usuarios){ %>
+                <% for(let userAdm of admUsers){ %>
 
                     <tr>
-                            <td><%= usuario.id %></td>
-                            <td><%= usuario.email %></td>
-                            <td><%= usuario.phoneNumber %></td>
+                            <td><%= userAdm.id %></td>
+                            <td><%= userAdm.email %></td>
+                            <td><%= userAdm.phoneNumber %></td>
                             <td>
-                                <a class="bt" href="/adm/usuarios/<%= usuario.id %>/edit">Editar</a>
-                                <a class="bt" href="/adm/usuarios/<%= usuario.id %>/delete">Remover</a>
+                                <a class="bt" href="/adm/usuarios/<%= userAdm.id %>/edit">Editar</a>
+                                <a class="bt" href="/adm/usuarios/<%= userAdm.id %>/delete">Remover</a>
                             </td>
                     </tr>
 

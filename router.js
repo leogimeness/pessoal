@@ -43,12 +43,13 @@ router.put("/adm/usuarios/:id/edit",admController.updateUsuario);
 router.get('/adm/usuarios/:id/delete',admController.deleteUsuario)
 
 
-router.use('/',usernameOnViewSetter, cartOnViewSetter)
-router.get('/',paginasController.showIndex)
-router.get('/sign-in',paginasController.showAccount)
-router.get('/sign-up',paginasController.showSignUp)
-router.get('/products/:category',paginasController.showProduct)
-router.get('/detail/:idProduto',paginasController.showProductDetail)
+router.use('/',usernameOnViewSetter, cartOnViewSetter);
+router.get('/',paginasController.showIndex);
+router.get('/sign-in',paginasController.showAccount);
+router.get('/sign-up',paginasController.showSignUp);
+router.post('/sign-up',paginasController.saveUser)
+router.get('/products/:category',paginasController.showProduct);
+router.get('/detail/:idProduto',paginasController.showProductDetail);
 
 //clientes
 

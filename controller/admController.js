@@ -1,13 +1,10 @@
 const produtos = require('../database/produtos.json')
 
-const usuarios = require('../database/usuarios.json')
+const admUsers = require('../database/usuarios.json')
 
 const produtoServices = require('../services/produtoServices.js')
 
-const usuariosServices = require("../services/usuarios.Services")
-
-const fs = require('fs')
-
+const admServices = require("../services/admServices")
 
 
 const admController = {
@@ -83,7 +80,7 @@ const admController = {
         res.redirect('/adm/produtos')
     },
     listarUsuarios:(req,res)=>{
-        res.render('admUsuarios.ejs',{usuarios})
+        res.render('admUsuarios.ejs',{admUsers})
     },
     addUsuario:(req,res) =>{
         res.render('admUser-form-add.ejs')
@@ -96,7 +93,7 @@ const admController = {
             email:req.body.email
         }
 
-        usuariosServices.addUsuario(user)
+        admServices.addUsuario(user)
 
         res.redirect('/adm/usuarios')
 
@@ -105,35 +102,35 @@ const admController = {
     editUsuario:(req,res) =>{
 
         let id = req.params.id
-        let usuario = usuarios.find(u => u.id == id)
+        let usuario = admUsers.find(u => u.id == id)
 
-        res.render('admUser-form-edit.ejs',{usuario})
+        res.render('admUser-form-edit.ejs',{admUsers})
 
     },
     updateUsuario:(req,res) =>{
 
         let id = req.params.id
-        let usuario = usuarios.find(u => u.id == id)
+        let usuario = admUsers.find(u => u.id == id)
 
         usuario.nome = req.body.nome,
         usuario.email = req.body.email,
         usuario.phoneNumber = req.body.phoneNumber
 
-        usuariosServices.save(usuarios)
+        admServices.save(admUsers)
 
         res.redirect('/adm/usuarios')
 
     },
     deleteUsuario: (req, res) => {
         const usuarioId = req.params.id;
-        const index = usuarios.findIndex(user => user.id == usuarioId);
+        const index = admUsers.findIndex(user => user.id == usuarioId);
     
         if (index === -1) {
             return res.status(404).send("User not found");
         }
     
-        usuarios.splice(index, 1);
-        usuariosServices.save(usuarios);
+        admUsers.splice(index, 1);
+        admServices.save(admUsers);
     
         return res.redirect("/adm/usuarios");
     }

@@ -1,32 +1,32 @@
-const usuarios = require('../database/usuarios.json')
+const admUsers = require('../database/usuarios.json')
 const fs = require('fs');
 const path = require('path');
 
 function loadUsuarios(){
-    return usuarios;
+    return admUsers;
 } 
 
 function loadUsuario(usarioId){
 
-    let usuario = usuarios.find(u => u.id == usarioId)
+    let usuario = admUsers.find(u => u.id == usarioId)
 
     if(usuario == undefined){throw new Error("Usuario Inexistente")}return usuario;
 }
 
 function addUsuario(usuario){
 
-    if(usuarios.length > 0){
-        usuario.id = parseInt(usuarios[usuarios.length -1].id) + 1
+    if(admUsers.length > 0){
+        usuario.id = parseInt(admUsers[admUsers.length -1].id) + 1
     } else{usuario.id = 1;}
 
-    usuarios.push(usuario)
+    admUsers.push(usuario)
 
-    save(usuarios)
+    save(admUsers)
 }
 
 function save(){
-    const filePath = path.resolve(__dirname + "/../database/usuarios.json")
-    fs.writeFileSync(filePath,JSON.stringify(usuarios,null,4))
+    const filePath = path.resolve(__dirname + "/../database/admUsers.json")
+    fs.writeFileSync(filePath,JSON.stringify(admUsers,null,4))
 }
 
 const usuariosServices = {
