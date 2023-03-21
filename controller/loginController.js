@@ -1,4 +1,4 @@
-const users = require("../database/users.json");
+const users = require("../database/usuarios.json");
 
 const loginController = {
     verifyAccount:(req,res)=>{

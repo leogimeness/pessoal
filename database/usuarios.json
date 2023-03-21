@@ -1,14 +1,12 @@
 [
-    {
-        "id": 1,
-        "phoneNumber": "13213179381",
-        "email": "lgs@gmail.com",
-        "senha": "123456"
+    {   
+        "name":"Leonardo",
+        "email":"leogimeness@Outlook.com",
+        "password":"123456"
     },
-    {
-        "nome": "test2",
-        "phoneNumber": "1382103981",
-        "email": "test2@gmail.com",
-        "id": 2
+    {   
+        "name":"leo",
+        "email":"leo@gmail.com",
+        "password":"123456"
     }
 ]
