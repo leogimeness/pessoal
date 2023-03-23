@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Kakashi1997!",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "Kakashi1997!",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Kakashi1997!",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
