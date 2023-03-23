@@ -1,6 +1,7 @@
 const produtos = require('../database/produtos.json')
 const usuarios = require("../database/usuarios.json")
 const usuariosServices = require("../services/usersServices.js")
+const {user} = require('../models')
 
 
 const paginasController = {
@@ -81,6 +82,18 @@ const paginasController = {
         }else{
             res.render('error404.ejs')
         }
+    },
+    test: async (req,res) =>{
+        try {
+            let mercadorias = await user.findAll()
+        // console.log(teste)
+        // const mercadorias  = produtos;
+        res.render('test.ejs',{mercadorias})
+            
+        } catch (error) {
+            console.log("pagesController_test",error)
+        }
+        
     }
 
 }
