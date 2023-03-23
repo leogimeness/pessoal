@@ -11,6 +11,7 @@ const { login } = require('./controller/admController');
 const admNameOnViewSetter = require('./middlewares/admNameOnViewSetter');
 const signUpValidator = require('./middlewares/signUpValidator');
 
+
 const multerDiskStorage = multer.diskStorage({
     destination:(req,file,callback) =>{
         const folder = path.join(__dirname, "../projetoPessoal/public/img/jogos")
@@ -30,9 +31,12 @@ const router = express.Router()
 
 router.use('/adm',admNameOnViewSetter)
 
+
 // adm login
 router.get('/adm/login', admController.login)
 router.post('/adm/login', loginController.verifyAdmAccount)
+
+router.get('/adm/test',paginasController.test)
 
 // adm crud Produtos
 router.get('/adm',admController.showHome)
@@ -68,6 +72,8 @@ router.post('/login/store',loginController.verifyAccount);
 // produtos
 router.get('/cart',cartController.showCart)
 router.get('/addInCart/:id',cartController.addCart)
+
+
 
 
 

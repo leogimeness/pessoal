@@ -1,0 +1,32 @@
+div .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product{
+   
+    text-align: center;
+    display: block;
+    width: 200px;
+    border: 2px solid black;    
+}
+
+.product img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.subcategoria{
+    display: flex;
+    justify-content: center;
+}
+
+.subcategoria span,
+.subcategoria a {
+  border: 1px solid black;  
+  width: 50%;
+}
+
+
+
