@@ -360,18 +360,5 @@
         "NewReleased": "",
         "Promotion": "",
         "type": "Merchandise"
-    },
-    {
-        "nome": "teste",
-        "genre": "Rpg",
-        "price": 123,
-        "img": [
-            "1679358798875test.png"
-        ],
-        "categoryID": "1",
-        "newRelease": "false",
-        "promotion": "false",
-        "type": "switch",
-        "id": 31
     }
 ]

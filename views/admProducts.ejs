@@ -34,14 +34,43 @@
                             <td><%= mercadoria.price == 0 ? "Free" : mercadoria.price %></td>
                             <td>
                                 <a class="bt" href="/adm/produtos/<%= mercadoria.id %>/edit">Editar</a>
-                                <a class="bt" href="/adm/produtos/<%= mercadoria.id %>/delete">Remover</a>
+                                <a class="bt" href="#" onclick="confirmDelete(<%= mercadoria.id %>)">Remover</a>
                             </td>
                     </tr>
 
+                    <div id="confirm-delete" style="display:none;">
+                        <p>Você tem certeza que deseja excluir essa mercadoria?</p>
+                        <button onclick="deleteMercadoria()">Sim</button>
+                        <button onclick="cancelDelete()">Não</button>
+
                 <% } %>
+
+                <div id="confirm-delete" style="display:none;">
+                    <p>Você tem certeza que deseja excluir essa mercadoria?</p>
+                    <button onclick="deleteMercadoria()">Sim</button>
+                    <button onclick="cancelDelete()">Não</button>
+                </div>
 
             </tbody>
         </table>
     </div>
+<script>
+    let mercadoriaIdToDelete;
+
+    function confirmDelete(id) {
+        mercadoriaIdToDelete = id;
+        const confirmBox = document.getElementById("confirm-delete");
+        confirmBox.style.display = "block";
+    }
+
+    function deleteMercadoria() {
+        window.location.href = "/adm/produtos/" + mercadoriaIdToDelete + "/delete";
+    }
+
+    function cancelDelete() {
+        const confirmBox = document.getElementById("confirm-delete");
+        confirmBox.style.display = "none";
+    }
+</script>
 </body>
 </html>
