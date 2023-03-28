@@ -11,12 +11,13 @@ const router = require('./router');
 
 app.set('model view engine','ejs')
 
-
+app.use((req,res,next)=>{res.locals.errors = []; next();})
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended:false}));
 // app.use(logMiddleWare)
 app.use(methodOverride('_method'));
 app.use(session({ secret:"senha", resave:false,saveUninitialized:false}))
+
 
 app.use(router)
 

@@ -10,6 +10,8 @@ const cartOnViewSetter = require('./middlewares/cartOnViewSetter');
 const { login } = require('./controller/admController');
 const admNameOnViewSetter = require('./middlewares/admNameOnViewSetter');
 const signUpValidator = require('./middlewares/signUpValidator');
+const passwordValidators = require('./middlewares/passwordValidators');
+const redirectedOnPasswordError = require('./middlewares/redirectedOnPasswordError');
 
 
 const multerDiskStorage = multer.diskStorage({
@@ -60,7 +62,7 @@ router.use('/',usernameOnViewSetter, cartOnViewSetter);
 router.get('/',paginasController.showIndex);
 router.get('/sign-in',paginasController.showAccount);
 router.get('/sign-up',paginasController.showSignUp);
-router.post('/sign-up',paginasController.saveRegisteredUser)//signUpValidator,
+router.post('/sign-up',...passwordValidators,redirectedOnPasswordError,paginasController.saveRegisteredUser)//signUpValidator,
 router.get('/products/:category',paginasController.showProduct);
 router.get('/detail/:idProduto',paginasController.showProductDetail);
 
