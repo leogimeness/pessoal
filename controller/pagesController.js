@@ -31,19 +31,6 @@ const paginasController = {
         usuariosServices.addUsuario(user)
 
         res.redirect('/')
-
-        // const {validationResult} =require('express-validator')
-
-        // let errors = validationResult(req)
-
-
-        // if (errors.isEmpty()){
-                
-            
-        // }else{
-        //     res.render('sign-up.ejs',{errors:errors.mapped(), old:req.body})
-        //     console.log(errors)
-        // }
     },
     showProduct:(req,res) =>{
 
