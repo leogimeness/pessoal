@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css',"admHeader.css","adm-forms.css"]}) %>
+
+<%- include("parts/admHeader.ejs") %>
+
+
+<body>
+    
+    <main>
+    <form action="/adm/usuarios/<%= userAdm.id %>/edit?_method=put" method="post">
+
+        <label for="product-name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="product-name">Email:</label>
+		<input type="text" id="email" name="email" required>
+
+        <label >Password:</label>
+		<input type="password" id="password" name="password">
+
+        <label for="product-name">Phone Number:</label>
+		<input type="text" id="phoneNumber" name="phoneNumber" required>
+
+        <button type="submit">Salvar</button>
+
+    </form>
+
+    </main>
+
+</body>
+
+
+
+</html>

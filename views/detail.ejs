@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css','header.css','footer.css','detail.css',]}) %>
+
+<body>
+    
+<%- include('parts/header.ejs') %>
+
+<main>
+
+  <section class ='product-detail'>
+
+    
+      <div class="product-gallery">
+        <img src="/img/jogos/<%= produto.img %>" alt="Product Image 1">
+      </div>
+
+
+      <div class="product-info">
+        <h6>Nintendo <%=produto.type%></h6>
+        <h1><%=produto.nome%></h1>
+        <span><%= produto.price%></span>
+        <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
+          
+      </div>
+
+
+
+  </section>
+    
+
+</main>
+
+<%- include("parts/footer.ejs") %>
+
+</body>
+</html>

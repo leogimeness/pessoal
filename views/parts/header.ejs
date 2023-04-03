@@ -1,78 +1,57 @@
 <header>
 
-<section class="top"> 
-    
-    <img src="/img/logo.svg" alt="">
+    <section id="menu">
 
-    <div class = "search">
-        <input type="text" placeholder="Search for your product here...">
-            
-        <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </div>
+        <div class="navbar">
 
-    <div  class = userMenu>
+            <img src="/img/logo.svg" alt="">
 
-        <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In </a>
-        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-    
-    </div>
+            <a class="titulos" href="/">Home</a>
 
+            <div class="dropdown">
+                <a href="" class="titulos">
+                    <i class="fa-solid fa-gamepad"></i>
+                    Shop
+                    <i class="fa-solid fa-sort-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="/products/1">All Games</a>
+                    <a href="/products/2">Shirts</a>
+                    <a href="/products/3">Toys</a>
+                </div>
+            </div>
 
-</section>
+            <a class="titulos" href="/">Contact Us</a>
 
-<section class = "menu">
-        
-<ul class = "navbar">
+            <div class="search">
+                <input type="text" placeholder="Search for your product here...">
 
-    <li class = "li-titulos">
-        <a href="/"></i></i> Home </a>  
-    </li>
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
 
-    
-    <li>
-        <a href="" id = "games"><i class="fa-solid fa-gamepad"></i> Games <i class="fa-solid fa-sort-down"></i></a>
-        <ul id = "submenuG">
-            <li><a href="" >Nintendo Switch</a></li>
-            <li><a href="" >New Release</a></li>
-            <li><a href="" >Shop Games</a></li>
-        </ul>
-    </li>
+        </div>
 
-        
-    <li class = "li-titulos">
-        <a href="" id = "merchandise"><i class="fa-solid fa-shirt"></i> Merchandise <i class="fa-solid fa-sort-down"></i></a>
-        <ul id = "submenuM">
-            <li>Shirts<a href="" ></a></li>
-            <li>Colletables<a href="" ></a></li>
-        </ul>
-    </li>
-        
+        <div class=userMenu>
 
-    <li class = "li-titulos">
-    <a href="" id = "acessories"><i class="fa-solid fa-display"></i></i> Acessories <i class="fa-solid fa-sort-down"></i></a>
-        <ul id = "submenuA">
-            <li>Consoles<a href="" ></a></li>
-            <li>Others<a href="" ></a></li>
-        </ul>
-    </li>
-    
-</ul>
+            <% if(username==undefined) { %>
+                <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In </a>
+                <% }else { %> <i class="fa-solid fa-user">
+                        <%= username %>
+                    </i>
+                    <% } %>
+      
+                    <% if(cart==undefined) { %>
+                        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <% }else { %>
+                            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>  <%= totItemCart %>
+                            </i> 
+                            <% } %>        
+                        
 
-    <div class = "logos">
-        
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
 
-    </div>
-
-</section>
-
-
-</section>
+    </section>
 
 </header>
-
