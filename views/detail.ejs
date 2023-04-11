@@ -3,36 +3,53 @@
 
 <%- include("parts/head", {css:['global.css','header.css','footer.css','detail.css',]}) %>
 
-<body>
-    
-<%- include('parts/header.ejs') %>
+  <body>
 
-<main>
+    <%- include('parts/header.ejs') %>
 
-  <section class ='product-detail'>
+      <main>
 
-    
-      <div class="product-gallery">
-        <img src="/img/jogos/<%= produto.img %>" alt="Product Image 1">
-      </div>
+        <section class='product-detail'>
 
 
-      <div class="product-info">
-        <h6>Nintendo <%=produto.type%></h6>
-        <h1><%=produto.nome%></h1>
-        <span><%= produto.price%></span>
-        <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
-          
-      </div>
+          <div class="product-gallery">
+
+            <div class ="image-gallery">
+              <!-- <a href="" target="_blank"><img src="/img/jogos/<%= produto.img %>" alt="Product Image 1"></a> -->
+              <video controls>
+                <source src="/videos/Pokemon_Scarlet__Nintendo_Switch.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+          </div>
+
+          <div class="modal">
+            <button><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+
+          <div class="product-info">
+            <h6>Nintendo <%=produto.type%>
+            </h6>
+            <h1>
+              <%=produto.nome%>
+            </h1>
+            <span>
+              <%= produto.price%>
+            </span>
+            <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
+
+          </div>
 
 
 
-  </section>
-    
+        </section>
 
-</main>
 
-<%- include("parts/footer.ejs") %>
+      </main>
 
-</body>
+      <%- include("parts/footer.ejs") %>
+
+  </body>
+
 </html>
