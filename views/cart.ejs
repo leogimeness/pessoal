@@ -3,55 +3,70 @@
 
 <%- include("parts/head", {css:['global.css','header.css','footer.css','cart.css',]}) %>
 
-<body>
-    
-<%- include('parts/header.ejs') %>
+  <body>
 
-<main>
+    <%- include('parts/header.ejs') %>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-     
-        <% if(cart != undefined) { %>
-          <% for (let item of cart) {%>
-          <tr>
-            <td>
-              <img src="/img/jogos/<%= item.img %>" alt="<%= item.nome %>">
-              <h2><%= item.nome %></h2>
-            </td>
-            <td><%= item.price %></td>
-            <td>
-              <input type="number" value="<%= item.quantity %>" min="1">
-            </td>
-            <td><%= item.total %></td>
-        </tr>
-          <% } %>
-        <%} else{%>
-            <h2>O carrinho esta vazio</h2>
-        <% } %>
-        
-     
-    </tbody>
-  </table>
+      <main>
 
-  <div class="subtotal">
-    <p>Subtotal:<%= totValue?.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})  %></p>
-    <button>Checkout</button>
-  </div>
+        <table>
+          <thead>
+            <% if(cart !=undefined) { %>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+              </tr>
+              <% } %>
+          </thead>
+          <tbody>
 
-</main>
-
-<%- include("parts/footer.ejs") %>
-
+            <% if(cart !=undefined) { %>
+              <% for (let item of cart) {%>
+                <tr>
+                  <td>
+                    <img src="/img/jogos/<%= item.img %>" alt="<%= item.nome %>">
+                    <h2>
+                      <%= item.nome %>
+                    </h2>
+                  </td>
+                  <td>
+                    <%= item.price %>
+                  </td>
+                  <td>
+                    <input type="number" value="<%= item.quantity %>" min="1">
+                  </td>
+                  <td>
+                    <%= item.total %>
+                  </td>
+                  <td>
+                    <button><i class="fa-solid fa-trash"></i></button>
+                  </td>
+                </tr>
+                <% } %>
+                  <%} else{%>
+                    <h2>O carrinho esta vazio</h2>
+                    <% } %>
 
 
-</body>
+          </tbody>
+        </table>
+
+        <div class="subtotal">
+          <p>Subtotal:<%= totValue?.toLocaleString('pt-br',{style: 'currency' , currency: 'BRL' }) %>
+          </p>
+          <button>Checkout</button>
+          <button>Continue Shopping</button>
+        </div>
+
+      </main>
+
+      <%- include("parts/footer.ejs") %>
+
+
+
+  </body>
+
 </html>
