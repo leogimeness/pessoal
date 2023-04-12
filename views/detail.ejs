@@ -14,12 +14,15 @@
 
           <div class="product-gallery">
 
-            <div class ="image-gallery">
-              <!-- <a href="" target="_blank"><img src="/img/jogos/<%= produto.img %>" alt="Product Image 1"></a> -->
-              <video controls>
-                <source src="/videos/Pokemon_Scarlet__Nintendo_Switch.mp4" type="video/mp4">
-              </video>
+            <div class="mainImage">
+              <video controls><source src="/videos/Pokemon_Scarlet__Nintendo_Switch.mp4" type="video/mp4"></video>
             </div>
+
+            <div class ="image-gallery">
+              <img src="/img/jogos/<%= produto.img %>" alt="Product Image 1">
+              <img src="/img/jogos/<%= produto.img %>" alt="Product Image 2">
+              <img src="/img/jogos/<%= produto.img %>" alt="Product Image 3">
+            </div>        
             
           </div>
 
@@ -40,8 +43,6 @@
             <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
 
           </div>
-
-
 
         </section>
 
