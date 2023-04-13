@@ -61,6 +61,7 @@ router.get('/adm/usuarios/:id/delete',admController.deleteUsuario)
 router.use('/',usernameOnViewSetter, cartOnViewSetter);
 router.get('/',paginasController.showIndex);
 router.get('/sign-in',paginasController.showAccount);
+router.get('/contact',paginasController.contact)
 router.get('/sign-up',paginasController.showSignUp);
 router.post('/sign-up',...passwordValidators,redirectedOnPasswordError,paginasController.saveRegisteredUser)//signUpValidator,
 router.get('/products/:category',paginasController.showProduct);

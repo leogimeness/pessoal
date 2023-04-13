@@ -70,6 +70,10 @@ const paginasController = {
             res.render('error404.ejs')
         }
     },
+    contact: (req,res) =>{
+        res.render('contact.ejs')
+
+    },
     test: async (req,res) =>{
         try {
             let mercadorias = await user.findAll()
