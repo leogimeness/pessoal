@@ -34,14 +34,17 @@
             <% if(username==undefined) { %>
                 <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In </a>
                 <% }else { %>
+                    
                     <div id="username">
-                        <i class="fa-solid fa-user"></i>
+                       
                         <button>
+                            <i class="fa-solid fa-user"></i>
                             <%= username %>
                         </button>
                         <div id="logout-btn"><a href="/logout">
                             Logout
                         </a></div>
+                        
                     </div>
 
                     <% } %>

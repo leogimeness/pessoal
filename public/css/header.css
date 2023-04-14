@@ -1,4 +1,4 @@
-header #menu{
+header #menu {
     background-color: rgb(255, 23, 54);
     padding: 0px 100px;
     display: grid;
@@ -6,41 +6,41 @@ header #menu{
     height: 80px;
 }
 
-header .navbar{
+header .navbar {
     height: 100%;
     display: flex;
     text-decoration: none;
     justify-content: flex-start;
-    gap:50px;
+    gap: 50px;
 }
 
-header .navbar img{
+header .navbar img {
     width: 100px;
 }
 
 
-header .titulos{
+header .titulos {
     font-size: 20px;
     font-weight: 600;
 }
 
-header .navbar .dropdown .dropdown-content{
+header .navbar .dropdown .dropdown-content {
     margin-top: 10px;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    opacity: 0;    
-    transition: opacity .5s  ease-in-out;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
 }
 
-header .dropdown .dropdown-content.show{
+header .dropdown .dropdown-content.show {
     opacity: 1;
 }
 
-header .dropdown-content a{
+header .dropdown-content a {
     display: block;
     width: 180px;
     text-align: center;
@@ -51,11 +51,11 @@ header .dropdown-content a{
 }
 
 
-header .search{
+header .search {
     position: relative;
 }
 
-header .search input{
+header .search input {
     border: solid 1px #c1c1c1;
     width: 350px;
     padding: 5px;
@@ -63,12 +63,12 @@ header .search input{
     border-radius: 15px;
 }
 
-header .search button{
+header .search button {
     position: absolute;
     background-color: transparent;
     border: none;
     color: #c1c1c1;
-    right:17px;
+    right: 17px;
     top: 50%;
     margin-top: -16px;
     cursor: pointer;
@@ -78,25 +78,47 @@ header .search button{
     border: 1px solid #c1c1c1;
 }
 
-header .userMenu{
+header .userMenu {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding-left: 20px;
     gap: 30px;
     font-size: 20px;
 }
 
-header .titulos:hover{
+#username{
+    position: relative;
+}
+
+#username>button{
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+#logout-btn{
+    display: none;
+    z-index: 10;
+    font-weight: 600;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    position: absolute;
+    
+}
+
+header .titulos:hover {
     color: #fff;
 }
 
-header .navbar .dropdown{
+header .navbar .dropdown {
     position: relative;
 }
 
 
-header .dropdown-content a:hover{
+header .dropdown-content a:hover {
     background-color: #ddd;
 }
 
@@ -105,12 +127,22 @@ header a {
     color: black;
 }
 
-.userMenu > a:hover{
+.userMenu>a:hover {
     color: white;
 }
 
-.nav
-.carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
+#username>button:hover{
+    color: white;
+}
+
+#logout-btn a:hover{
+    color: red;
+
+}
+.nav .carousel-control-next,
+.carousel-control-prev
+
+/*, .carousel-indicators */
+    {
     filter: invert(100%);
 }
