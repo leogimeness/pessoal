@@ -21,14 +21,10 @@
                 </div>
             </div>
 
-            <a class="titulos" href="/">Contact Us</a>
+            <a class="titulos" href="/contact">Contact Us</a>
 
             <div class="search">
                 <input type="text" placeholder="Search for your product here...">
-
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
             </div>
 
         </div>
@@ -37,21 +33,32 @@
 
             <% if(username==undefined) { %>
                 <a href="/sign-in"><i class="fa-solid fa-user"></i> Sign In </a>
-                <% }else { %> <i class="fa-solid fa-user">
-                        <%= username %>
-                    </i>
+                <% }else { %>
+                    <div id="username">
+                        <i class="fa-solid fa-user"></i>
+                        <button>
+                            <%= username %>
+                        </button>
+                        <div id="logout-btn"><a href="/logout">
+                            Logout
+                        </a></div>
+                    </div>
+
                     <% } %>
-      
-                    <% if(cart==undefined) { %>
-                        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <% }else { %>
-                            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>  <%= totItemCart %>
-                            </i> 
-                            <% } %>        
-                        
+
+                        <% if(cart==undefined) { %>
+                            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <% }else { %>
+                                <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <%= totItemCart %>
+                                    </i>
+                                    <% } %>
+
 
         </div>
 
     </section>
+
+    <script src="/js/logOut.js"></script>
 
 </header>

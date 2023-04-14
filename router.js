@@ -68,7 +68,7 @@ router.get('/products/:category',paginasController.showProduct);
 router.get('/detail/:idProduto',paginasController.showProductDetail);
 
 //clientes
-
+router.get('/logout',loginController.logout)
 router.post('/login/store',loginController.verifyAccount);
 
 

@@ -34,6 +34,17 @@ const loginController = {
         req.session.admName = admUser.nome
 
         res.redirect('/adm')
+    },
+    logout:(req,res) =>{
+        
+        req.session.destroy((err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              // redirect the user to the sign-in page
+              res.redirect('/sign-in');
+            }
+          });
     }
 
 }
