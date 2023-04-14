@@ -27,13 +27,14 @@ main{
     padding: 10px 0px 0px 20px;
 }
 
-#regcostumer h2{
-    font-size: 20px;
+#regcostumer h2,#newcostumer h2{
+    font-size: 30px;
+    font-weight: 600;
     border-bottom: 1px solid black;
 }
 
 #regcostumer form{
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 #regcostumer a{
@@ -51,15 +52,8 @@ main{
     padding: 10px 0 0 50px;
 }
 
-#newcostumer h2{
-    font-size: 20px;
-    border-bottom: 1px solid black;
-    
-}
-
 #newcostumer p {
-padding: 20px 0px 20px 0px;
-
+padding: 40px 0px 20px 0px;
 }
 
 button.btn.btn-primary {
@@ -79,6 +73,13 @@ button.btn.btn-primary {
     cursor: pointer;
 }
 
+#logOutMessage {
+    font-weight: 600;
+    color: green;
+    font-size: 16px;
+}
+
 #regcostumer a:hover{
     color: red;
 }
+

@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("parts/head", {css:['global.css','header.css','footer.css','sign-in.css']}) %>
+<%- include("parts/head", {css:['global.css','header.css','footer.css','sign-in.css']}) %>
 
-<body>
+  <body>
 
 
     <%- include('parts/header.ejs') %>
 
-    <main>  
+      <main>
 
-      <section class = "center">  
-          
-         <div id = "regcostumer">
-              <h2>Registered Costumer</h2>
-              
-              <form action = "/login/store" method ="post">
-                  
+        <section class="center">
+
+          <div id="regcostumer">
+            <h2>Registered Costumer</h2>
+
+            <% if (typeof logOutMessage !== 'undefined') { %>
+              <p id="logOutMessage"><%= logOutMessage %></p>
+          <% } %>
+
+                <form action="/login/store" method="post">
+
                   <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Email Address</label>
-                    <input type="text" name ="email" class="form-control" id="formGroupExampleInput" placeholder="Enter your email" required>
+                    <input type="text" name="email" class="form-control" id="formGroupExampleInput"
+                      placeholder="Enter your email" required>
                   </div>
                   <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter you password" required>
+                    <input type="password" name="password" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Enter you password" required>
                   </div>
 
-                  <a href="#" id = "forgot-bt">Forgot your password?</a>
+                  <a href="#" id="forgot-bt">Forgot your password?</a>
 
                   <div class="col-12">
                     <button type="submit" class="btn btn-primary">Sign in</button>
                   </div>
 
-                  
-          </div>
-              
-              </form>
-          </div>
-
-          <div id = "newcostumer">
-              <h2>New Costumers</h2>
-              <p>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
-              <a href="/sign-up"><button>Sign up</button></a>
 
           </div>
 
-         
+          </form>
+          </div>
 
-          
-      
-      </section>
-  
-    </main>
+          <div id="newcostumer">
+            <h2>New Costumers</h2>
+            <p>Creating an account has many benefits: check out faster, keep more than one address, track orders and
+              more.</p>
+            <a href="/sign-up"><button>Sign up</button></a>
 
-    <%- include("parts/footer.ejs") %>
+          </div>
 
 
-</body>
+
+
+
+        </section>
+
+      </main>
+
+      <%- include("parts/footer.ejs") %>
+
+
+  </body>
+
 </html>
