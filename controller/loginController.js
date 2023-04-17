@@ -37,6 +37,8 @@ const loginController = {
     },
     logout: (req, res) => {
 
+        delete req.session.username;
+
         req.session.destroy((err) => {
             if (err) {
                 console.log(err);
@@ -44,8 +46,6 @@ const loginController = {
                 const logOutMessage = 'You have been logged out successfully.'
                 res.locals.logOutMessage = logOutMessage;
 
-                console.log('message:', logOutMessage)
-                // redirect the user to the sign-in page
                 res.render('sign-in.ejs',{logOutMessage});
             }
         });
