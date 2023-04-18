@@ -75,6 +75,7 @@ router.post('/login/store',loginController.verifyAccount);
 // produtos
 router.get('/cart',cartController.showCart)
 router.get('/addInCart/:id',cartController.addCart)
+router.get('/cart/delete/:id',cartController.deleteProductInCart)
 
 
 

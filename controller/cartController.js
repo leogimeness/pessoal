@@ -39,6 +39,17 @@ const cartController = {
         res.redirect("/cart")
 
         
+    },
+    deleteProductInCart: (req,res) => {
+        let id = req.params.id
+
+        // let produto = req.session.cart.find(p => p.id == id)
+
+        let index = req.session.cart.findIndex(i => i.id == id)
+        
+        req.session.cart.splice(index,1)
+
+        res.redirect('/cart')   
     }
 }
 
