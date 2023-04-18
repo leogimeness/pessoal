@@ -15,29 +15,29 @@
           <div id="regcostumer">
             <h2>Registered Costumer</h2>
 
-            <% if (typeof logOutMessage !=='undefined' ) { %>
+            <% if (logOutMessage !== undefined ){ %>
               <p id="logOutMessage">
                 <%= logOutMessage %>
               </p>
               <% } %>
-                    <form action="/login/store" method="post">
+                <form action="/login/store" method="post">
 
-                      <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Email Address</label>
-                        <input type="text" name="email" class="form-control" id="formGroupExampleInput"
-                          placeholder="Enter your email" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" id="formGroupExampleInput2"
-                          placeholder="Enter you password" required>
-                      </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Email Address</label>
+                    <input type="text" name="email" class="form-control" id="formGroupExampleInput"
+                      placeholder="Enter your email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Enter you password" required>
+                  </div>
 
-                      <a href="#" id="forgot-bt">Forgot your password?</a>
+                  <a href="#" id="forgot-bt">Forgot your password?</a>
 
-                      <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                      </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </div>
 
 
           </div>

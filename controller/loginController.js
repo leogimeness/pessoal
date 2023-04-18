@@ -37,16 +37,12 @@ const loginController = {
     },
     logout: (req, res) => {
 
-        delete req.session.username;
-
         req.session.destroy((err) => {
             if (err) {
                 console.log(err);
             } else {
-                const logOutMessage = 'You have been logged out successfully.'
-                res.locals.logOutMessage = logOutMessage;
-
-                res.render('sign-in.ejs',{logOutMessage});
+                // res.redirect('/sign-in?logOutMessage=You have been logged out successfully.');
+                res.redirect('/sign-in?logOut=true');
             }
         });
     }
