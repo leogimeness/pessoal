@@ -31,7 +31,7 @@ module.exports = (Sequelize, DataTypes) => {
             }
         },
         {
-            timeStamp: false,
+            timestamps: false,
             tableName: "delivery_fee"
         }
     )
