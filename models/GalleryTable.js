@@ -28,5 +28,14 @@ module.exports = (Sequelize,DataTypes) =>{
         }
     )
 
+    Gallery.associate = (models) =>{
+        Gallery.belongsTo(
+            models.Products,
+            {
+                as: "products", foreignKey: "products_id"
+            }
+        )
+    }
+
     return Gallery;
 }
