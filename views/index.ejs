@@ -116,8 +116,8 @@
 
             <div class="games">
                 <a href="/detail/<%= mercadorias[i].id%>">
-                    <img src="/img/jogos/<%= mercadorias[i].img %>" alt="">
-                    <h2><%= mercadorias[i].nome %></h2>
+                    <img src="/img/jogos/<%= mercadorias[i].gallery[0].img_video_path_stored %>" alt="">
+                    <h2><%= mercadorias[i].product_name %></h2>
                     <span>$<%= mercadorias[i].price == "0" ? "Free" : mercadorias[i].price%></span>
                     <span class = "discount">10% at the checkout</span>
                 </a>

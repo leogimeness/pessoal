@@ -1,16 +1,24 @@
 const produtos = require('../database/produtos.json')
 const usuarios = require("../database/usuarios.json")
 const usuariosServices = require("../services/usersServices.js")
-const { user } = require('../models')
+const { user,Products } = require('../models')
+
 
 
 const paginasController = {
 
-    showIndex: (req, res) => {
+    showIndex: async (req, res) => {
 
-        let mercadorias = produtos.filter(p => p.Promotion == true)
-        res.render('index.ejs', { mercadorias })
-
+        // let mercadorias = produtos.filter(p => p.Promotion == true)
+        try {
+            const mercadorias = await Products.findAll({ 
+              include: ["gallery"],
+              where: {promotion: true} })
+              console.log(mercadorias[0].gallery.img_video_path_stored)
+            res.render('index.ejs', { mercadorias })
+        } catch (error) {
+            console.log(error)
+        }
     },
     showAccount: (req, res) => {
         // const {logOutMessage} = req.query
