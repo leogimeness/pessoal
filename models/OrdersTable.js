@@ -44,5 +44,19 @@ module.exports = (Sequelize,DataTypes) =>{
         }
 
     )
+
+    Orders.associate =(models) =>{
+        Orders.belongsToMany(
+            models.Products,
+            {
+                as: "products",
+                through: "items_orders",
+                foreignKey: "orders_id",
+                otherKey: "products_id",
+                timestamps: false
+            }
+        )
+    }
+
 return Orders
 }
