@@ -25,17 +25,10 @@ module.exports = (Sequelize, DataTypes) => {
             }
         },
         {
-            timeStamp: false,
+            timestamps: false,
             tableName: "items_orders"
         }
     )
-
-    Items_orders.associate = (models) => {
-        Items_orders.belongsTo(models.Products, {
-            as: "product",
-            foreignKey: "product_id",
-        });
-    };
 
     return Items_orders;
 }
