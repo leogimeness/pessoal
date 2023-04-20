@@ -36,5 +36,12 @@ module.exports = (Sequelize, DataTypes) => {
         }
     )
 
+    Delivery_fee.associate = (models) => {
+        Delivery_fee.hasMany(
+            models.Orders,
+            {as:'orders', foreignKey:"delivery_fee_id"}
+        )
+    }
+
     return Delivery_fee;
 }

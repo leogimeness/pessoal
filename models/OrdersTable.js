@@ -61,6 +61,10 @@ module.exports = (Sequelize, DataTypes) => {
         Orders.belongsTo(
             models.Address,
             {as:"address", foreignKey:"address_id"});
+        Orders.belongsTo(
+            models.Delivery_fee,
+            {as:"delivery_fee", foreignKey: "delivery_fee_id" }
+        )
 }
 
 return Orders
