@@ -44,5 +44,13 @@ module.exports = (Sequelize, DataTypes) => {
         }
 
     )
+
+    Clients.associate = (models) => {
+        Clients.hasMany(
+            models.Address,
+            {as: 'addresses', foreignKey:"client_id"}
+        )
+    }
+
 return Clients;
 }
