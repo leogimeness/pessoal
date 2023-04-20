@@ -1,51 +1,51 @@
-module.exports = (Sequelize,DataTypes) =>{
+module.exports = (Sequelize, DataTypes) => {
 
     const Orders = Sequelize.define(
         'Orders',
         {
-            id:{
+            id: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
                 allowNull: false,
                 primaryKey: true
             },
-            address_id:{
+            address_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            clients_id:{
+            clients_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            payment_methods_id:{
+            payment_method_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            delivery_fee_id:{
+            delivery_fee_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            createdAt:{
+            createdAt: {
                 type: DataTypes.DATE
             },
-            updatedAt:{
+            updatedAt: {
                 type: DataTypes.DATE
             },
-            deletedAt:{
+            deletedAt: {
                 type: DataTypes.DATE
             },
-            payAt:{
+            payAt: {
                 type: DataTypes.DATE
             }
         },
         {
-            timestamps:true,
-            tableName:'orders'
+            timestamps: true,
+            tableName: 'orders'
         }
 
     )
 
-    Orders.associate =(models) =>{
+    Orders.associate = (models) => {
         Orders.belongsToMany(
             models.Products,
             {
@@ -54,9 +54,12 @@ module.exports = (Sequelize,DataTypes) =>{
                 foreignKey: "order_id",
                 otherKey: "product_id",
                 timestamps: false
-            }
-        )
+            }),
+        Orders.belongsTo(
+            models.Payment_methods,
+            { as:"payment_methods", foreignKey:"payment_method_id" }
+            )    
     }
 
-return Orders
+    return Orders
 }

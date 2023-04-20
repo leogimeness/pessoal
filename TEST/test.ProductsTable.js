@@ -1,8 +1,8 @@
-const { Products, sequelize } = require('../models');
+const { Orders, sequelize } = require('../models');
 
 async function teste(){
-    let products = await Products.findAll();
-    console.log(products)
+    let table = await Orders.findAll({include: "payment_methods"});
+    console.log(table)
  
     sequelize.close();
 }
