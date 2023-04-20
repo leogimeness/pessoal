@@ -20,31 +20,34 @@ module.exports = (Sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
-            district:{
+            district: {
                 type: DataTypes.STRING(255)
             },
-            city_id:{
+            city_id: {
                 type: DataTypes.INTEGER,
-                allowNull: false    
+                allowNull: false
             },
-            postal_code:{
+            postal_code: {
                 type: DataTypes.STRING(255),
-                allowNull: false 
+                allowNull: false
             },
-            obs:{
+            obs: {
                 type: DataTypes.STRING(255)
             }
         },
         {
-            timestamps:false,
-            tableName:'address'
+            timestamps: false,
+            tableName: 'address'
         }
     )
 
-    Address.associate = (models) =>{
+    Address.associate = (models) => {
         Address.belongsTo(
             models.Clients,
-            {as: 'clients', foreignKey: 'client_id'});
+            {as: 'clients', foreignKey: 'client_id'}),
+        Address.hasMany(
+            models.Orders,
+            {as: 'orders',foreignKey: 'address_id'});
     }
 
     return Address;

@@ -57,9 +57,11 @@ module.exports = (Sequelize, DataTypes) => {
             }),
         Orders.belongsTo(
             models.Payment_methods,
-            { as:"payment_methods", foreignKey:"payment_method_id" }
-            )    
-    }
+            { as:"payment_methods", foreignKey:"payment_method_id" }),
+        Orders.belongsTo(
+            models.Address,
+            {as:"address", foreignKey:"address_id"});
+}
 
-    return Orders
+return Orders
 }

@@ -1,8 +1,8 @@
-const { Address, sequelize } = require('../models');
+const { Orders, sequelize } = require('../models');
 
 async function teste(){
-    let table = await Address.findAll({include: "clients"});
-    console.log(table[0].clients)
+    let table = await Orders.findAll({include: "address"});
+    console.log(table[0].address)
  
     sequelize.close();
 }
