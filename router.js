@@ -32,9 +32,9 @@ const router = express.Router()
 
 
 
+
+
 router.use('/adm',admNameOnViewSetter)
-
-
 // adm login
 router.get('/adm/login', admController.login)
 router.post('/adm/login', loginController.verifyAdmAccount)

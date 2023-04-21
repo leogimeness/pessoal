@@ -1,7 +1,7 @@
 const produtos = require('../database/produtos.json')
 const usuarios = require("../database/usuarios.json")
 const usuariosServices = require("../services/usersServices.js")
-const { user,Products } = require('../models')
+const { Clientes, Products } = require('../models')
 
 
 
@@ -11,10 +11,11 @@ const paginasController = {
 
         // let mercadorias = produtos.filter(p => p.Promotion == true)
         try {
-            const mercadorias = await Products.findAll({ 
-              include: ["gallery"],
-              where: {promotion: true} })
-              console.log(mercadorias[0].gallery.img_video_path_stored)
+            const mercadorias = await Products.findAll({
+                include: ["gallery"],
+                where: { promotion: true }
+            })
+            // console.log(mercadorias.gallery[0].img_video_path_stored)
             res.render('index.ejs', { mercadorias })
         } catch (error) {
             console.log(error)
@@ -47,13 +48,25 @@ const paginasController = {
 
         res.redirect('/')
     },
-    showProduct: (req, res) => {
+    showProduct: async (req, res) => {
 
-        let categoryID = Number(req.params.category)
-        let produtosFiltrados = produtos.filter(p => p.categoryID == categoryID)
+        try {
+            const categoryId = await Number(req.params.category)
+            const produtosFiltrados = await Products.findAll({
+                include: ["gallery"],
+                where: { categories_id: req.params.category }
+            })
+
+            res.render('products.ejs', { produtosFiltrados, categoryId });
+
+        } catch (error) {
+            console.log(error)
+
+        }
+        // let categoryID = Number(req.params.category)
+        // let produtosFiltrados = produtos.filter(p => p.categoryID == categoryID)
         let price = req.query.price
         let genres = req.query.genre
-
 
         if (genres && genres.length > 0) {
             produtosFiltrados = produtosFiltrados.filter(p => genres.includes(p.genre));
@@ -72,7 +85,7 @@ const paginasController = {
             }
         }
 
-        res.render('products.ejs', { produtosFiltrados, categoryID });
+
     },
     showProductDetail: (req, res) => {
 
