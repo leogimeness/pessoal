@@ -54,8 +54,8 @@
             <div class="games">
 
                 <a href="/detail/<%= produto.id%>">
-                    <img src="/img/jogos/<%= produto.img %>" alt="">
-                    <h2><%=produto.nome%></h2>
+                    <img src="/img/jogos/<%= produto.gallery[0].img_video_path_stored %>" alt="">
+                    <h2><%=produto.product_name%></h2>
                     <span>$<%= produto.price == 0 ? "Free" : produto.price %></span>
                 </a>
                 
