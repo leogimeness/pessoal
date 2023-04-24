@@ -51,7 +51,7 @@ const paginasController = {
     showProduct: async (req, res) => {
 
         try {
-            const categoryId = await Number(req.params.category)
+            const categoryId = Number(req.params.category)
             const produtosFiltrados = await Products.findAll({
                 include: ["gallery"],
                 where: { categories_id: req.params.category }
@@ -87,17 +87,31 @@ const paginasController = {
 
 
     },
-    showProductDetail: (req, res) => {
+    showProductDetail: async (req, res) => {
 
-        let id = req.params.idProduto;
+        
 
-        let produto = produtos.find(p => p.id == id)
-
-        if (produto !== undefined) {
+        try {
+            let id = Number(req.params.idProduto)
+            console.log(id)
+            const produto = await Products.findByPk(id,{
+                include: ["gallery"]
+            })
+            console.log(produto.gallery[0].img_video_path_stored)
             res.render('detail.ejs', { produto })
-        } else {
-            res.render('error404.ejs')
+        } catch (error) {
+            console.log(error)
         }
+
+        // let id = req.params.idProduto;
+
+        // let produto = produtos.find(p => p.id == id)
+
+        // if (produto !== undefined) {
+        //     res.render('detail.ejs', { produto })
+        // } else {
+        //     res.render('error404.ejs')
+        // }
     },
     contact: (req, res) => {
         res.render('contact.ejs')
