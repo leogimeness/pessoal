@@ -29,6 +29,9 @@ module.exports = (Sequelize, DataTypes) => {
                 type: DataTypes.STRING(255),
                 allowNull: false
             },
+            genre:{
+                type: DataTypes.STRING(255)
+            },
             active: {
                 type: DataTypes.TINYINT,
                 allowNull: false

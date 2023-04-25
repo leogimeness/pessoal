@@ -51,11 +51,34 @@ const paginasController = {
     showProduct: async (req, res) => {
 
         try {
+            const price = req.query.price
+            const genres = req.query.genre    
             const categoryId = Number(req.params.category)
-            const produtosFiltrados = await Products.findAll({
+            let produtosFiltrados = await Products.findAll({
                 include: ["gallery"],
                 where: { categories_id: req.params.category }
             })
+
+            console.log(req.params.category)
+            console.log(produtosFiltrados)
+            if (genres && genres.length > 0) {
+                produtosFiltrados = produtosFiltrados.filter(p => genres.includes(p.genre));
+            }   
+    
+            if (price !== undefined) {
+                switch (price) {
+    
+                    case "50": produtosFiltrados = produtosFiltrados.filter(p => p.price <= 50)
+                        break;
+    
+                    case "51": produtosFiltrados = produtosFiltrados.filter(p => p.price > 50)
+                        break;
+    
+                    default:
+                }
+            }
+
+            console.log(produtosFiltrados)
 
             res.render('products.ejs', { produtosFiltrados, categoryId });
 
@@ -65,25 +88,11 @@ const paginasController = {
         }
         // let categoryID = Number(req.params.category)
         // let produtosFiltrados = produtos.filter(p => p.categoryID == categoryID)
-        let price = req.query.price
-        let genres = req.query.genre
+       
 
-        if (genres && genres.length > 0) {
-            produtosFiltrados = produtosFiltrados.filter(p => genres.includes(p.genre));
-        }
+        
 
-        if (price !== undefined) {
-            switch (price) {
-
-                case "50": produtosFiltrados = produtosFiltrados.filter(p => p.price <= 50)
-                    break;
-
-                case "51": produtosFiltrados = produtosFiltrados.filter(p => p.price > 50)
-                    break;
-
-                default:
-            }
-        }
+        
 
 
     },
@@ -95,10 +104,12 @@ const paginasController = {
             let id = Number(req.params.idProduto)
             console.log(id)
             const produto = await Products.findByPk(id,{
-                include: ["gallery"]
+                include: "gallery"
             })
-            console.log(produto.gallery[0].img_video_path_stored)
+            console.log('aqui', produto.gallery[0].img_video_path_stored)
+            // console.log(produto)
             res.render('detail.ejs', { produto })
+            
         } catch (error) {
             console.log(error)
         }
