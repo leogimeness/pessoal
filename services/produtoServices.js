@@ -1,4 +1,5 @@
 const produtos = require('../database/produtos.json');
+const {Products,Gallery} = require('../models')
 const fs = require('fs');
 const path = require('path');
 
@@ -15,17 +16,15 @@ function loadProduto(idDoProduto){
     }return produto;
 }
 
-function addProduto(produto) {
-    if (produtos.length > 0) {
-      produto.id = parseInt(produtos[produtos.length - 1].id) + 1;
-    } else {
-      produto.id = 1;
-    }
-      
-    produtos.push(produto);
-  
-    save(produtos);
-  }
+async function addProduto(produto,gallery) {
+    const newProduct = await Products.create(produto)
+    
+    const newImage = await Gallery.create
+    ({products_id: newProduct.id,
+        img_video_path_stored: gallery.img_video_path_stored,
+        isImg: gallery.isImg})
+
+}
 
 function removeProduto(idDoProduto){
     let posicao = produtos.findIndex(p => p.id == idDoProduto);

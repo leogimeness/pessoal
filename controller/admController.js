@@ -34,21 +34,26 @@ const admController = {
     addProdutos: (req,res) => {
         res.render('adm-form-add.ejs')
     },
-    saveProduto:(req,res) =>{
+    saveProduto: async (req,res) =>{
 
-        let produto = {
-            nome:req.body.name,
-            genre:req.body.genre,
-            price:parseFloat(req.body.price),
-            img:[req.file.filename],
-            categoryID:req.body.category,
-            newRelease:req.body.released,
-            promotion:req.body.promotion,
-            type:req.body.type  
+        const gallery = {
+            img_video_path_stored:req.file.filename,
+            isImg:1
         }
 
+        const produto = {
+            product_name:req.body.name, 
+            genre:req.body.genre,
+            price:parseFloat(req.body.price),
+            categories_id:req.body.category,
+            new_released:req.body.released,
+            promotion:req.body.promotion,
+            active: 1
+        }
 
-        produtoServices.addProduto(produto)
+        console.log(produto)
+
+        await produtoServices.addProduto(produto,gallery)
 
         res.redirect("/adm/produtos")
     },

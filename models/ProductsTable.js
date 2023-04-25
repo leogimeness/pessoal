@@ -22,11 +22,11 @@ module.exports = (Sequelize, DataTypes) => {
                 allowNull: false
             },
             new_released: {
-                type: DataTypes.STRING(255),
+                type: DataTypes.TINYINT(1),
                 allowNull: false
             },
             promotion: {
-                type: DataTypes.STRING(255),
+                type: DataTypes.TINYINT(1),
                 allowNull: false
             },
             genre:{
