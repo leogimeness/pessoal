@@ -1,5 +1,5 @@
 const usuariosServices = require("../services/usersServices.js")
-const { Clientes, Products } = require('../models')
+const { Clients, Products } = require('../models')
 
 
 
