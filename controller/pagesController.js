@@ -1,5 +1,3 @@
-const produtos = require('../database/produtos.json')
-const usuarios = require("../database/usuarios.json")
 const usuariosServices = require("../services/usersServices.js")
 const { Clientes, Products } = require('../models')
 

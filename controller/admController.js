@@ -2,9 +2,13 @@ const produtos = require('../database/produtos.json')
 
 const admUsers = require('../database/admUsers.json')
 
+const {Products, Admins } = require('../models')
+
 const produtoServices = require('../services/produtoServices.js')
 
 const admServices = require("../services/admServices")
+
+
 
 
 const admController = {
@@ -14,10 +18,17 @@ const admController = {
     showHome:(req,res) =>{
         res.render('admhome.ejs')
     },
-    listarProdutos: (req,res) =>{
+    listarProdutos: async (req,res) =>{
         
-        const mercadorias  = produtos;
-        res.render('admProducts.ejs',{mercadorias});
+        try {
+            const mercadorias = await Products.findAll({
+                include: ["gallery"],
+                
+            })
+            res.render('admProducts.ejs',{mercadorias});
+        } catch (error) {
+            console.log(error)
+        }
 
     },
     addProdutos: (req,res) => {
@@ -79,8 +90,15 @@ const admController = {
 
         res.redirect('/adm/produtos')
     },
-    listarUsuarios:(req,res)=>{
-        res.render('admUsuarios.ejs',{admUsers})
+    listarUsuarios: async (req,res)=>{
+
+        try {
+            const admUsers = await Admins.findAll()
+            res.render('admUsuarios.ejs',{admUsers})
+        } catch (error) {
+            console.log(error)
+        }
+
     },
     addUsuario:(req,res) =>{
         res.render('admUser-form-add.ejs')

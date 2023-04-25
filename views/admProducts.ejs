@@ -29,8 +29,8 @@
 
                     <tr>
                             <td><%= mercadoria.id %></td>
-                            <td><img src="/img/jogos/<%= mercadoria.img %>" alt="<%= mercadoria.nome %>"></td>
-                            <td><%= mercadoria.nome %></td>
+                            <td><img src="/img/jogos/<%= mercadoria.gallery[0].img_video_path_stored %>" alt="<%= mercadoria.product_name %>"></td>
+                            <td><%= mercadoria.product_name %></td>
                             <td><%= mercadoria.price == 0 ? "Free" : mercadoria.price %></td>
                             <td>
                                 <a class="bt" href="/adm/produtos/<%= mercadoria.id %>/edit">Editar</a>
