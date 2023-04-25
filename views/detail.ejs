@@ -25,7 +25,7 @@
             </div>
 
             <div class="image-gallery">
-              <img class= "carrousel-item" src="/img/jogos/<%= produto.img %>" alt="Product Image 1">
+              <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[0].img_video_path_stored %>" alt="Product Image 1">
               <img class= "carrousel-item" src="/img/jogos/115972-super-mario-piranha-plant-poseable-lamp-1200x675.avif" alt="Product Image 2">
               <img class= "carrousel-item" src="/img/jogos/115640-tree-topper-zelda-package-2000x2000.avif" alt="Product Image 3">
             </div>
@@ -38,10 +38,10 @@
 
 
           <div class="product-info">
-            <h6>Nintendo <%=produto.type%>
+            <!-- <h6>Nintendo <%= produto.type%> -->
             </h6>
             <h1>
-              <%=produto.nome%>
+              <%= produto.product_name%>
             </h1>
             <span>
               <%= produto.price%>
