@@ -11,17 +11,17 @@
     <main>
     <form action="/adm/usuarios/<%= userAdm.id %>/edit?_method=put" method="post">
 
-        <label for="product-name">Name:</label>
-		<input type="text" id="name" name="name" required>
+        <label for="product-name">First Name:</label>
+		<input type="text" id="name" name="first_name" value="<%= userAdm.first_name %>" required>
+
+        <label for="product-name">Last Name:</label>
+		<input type="text" id="name" name="last_name" value="<%= userAdm.last_name %>" required>
 
 		<label for="product-name">Email:</label>
-		<input type="text" id="email" name="email" required>
+		<input type="text" id="email" name="email" value="<%= userAdm.email %>" required>
 
         <label >Password:</label>
 		<input type="password" id="password" name="password">
-
-        <label for="product-name">Phone Number:</label>
-		<input type="text" id="phoneNumber" name="phoneNumber" required>
 
         <button type="submit">Salvar</button>
 
