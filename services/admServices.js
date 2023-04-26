@@ -1,7 +1,5 @@
-const admUsers = require('../database/admUsers.json')
 const{Admins} = require('../models')
-const fs = require('fs');
-const path = require('path');
+
 
 function loadUsuarios(){
     return admUsers;
