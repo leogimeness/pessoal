@@ -2,7 +2,7 @@ const produtos = require('../database/produtos.json')
 
 const admUsers = require('../database/admUsers.json')
 
-const {Products, Admins } = require('../models')
+const {Products, Admins, Gallery } = require('../models')
 
 const produtoServices = require('../services/produtoServices.js')
 
@@ -51,34 +51,42 @@ const admController = {
             active: 1
         }
 
-        console.log(produto)
-
         await produtoServices.addProduto(produto,gallery)
 
         res.redirect("/adm/produtos")
     },
-    editProduct:(req,res)=>{
+    editProduct: async (req,res)=>{
 
-        let id = req.params.id
-        let produto = produtos.find(p => p.id == id)
+        const id = req.params.id
+
+        const produto = await Products.findByPk(id)
 
         res.render('adm-form-edit.ejs',{produto})
     },
-    updateProduct:(req,res) =>{
+    updateProduct: async (req,res) =>{
 
-        let id = req.params.id
-        let produto = produtos.find(p => p.id == id)
+        const id = req.params.id
 
-        produto.nome = req.body.nome;
+        const produto = await Products.findByPk(id)
+        
+        
+        produto.product_name = req.body.nome;
         produto.genre = req.body.genre;
-        produto.categoryID = req.body.category;
+        produto.categories_id = req.body.category;
         produto.price = req.body.price;
-        produto.type = req.body.type;
-        produto.Promotion = req.body.promotion;
-        produto.NewReleased = req.body.released
-        produto.img =  req.file.filename;
+        produto.promotion = req.body.promotion;
+        produto.new_released = req.body.released
+        produto.active = 1
+        produto.img_video_path_stored =  req.file.filename;
+        
+        await produto.save()
 
-        produtoServices.save(produtos)
+        Gallery.destroy({where: {products_id: produto.id} })
+
+        const newImage = await Gallery.create
+        ({products_id: produto.id,
+            img_video_path_stored: req.file.filename,
+            isImg: 1})
 
         res.redirect("/adm/produtos")
     },

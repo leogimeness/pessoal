@@ -13,7 +13,7 @@
 				<form action="/adm/produtos/<%= produto.id %>/edit?_method=put" method="post"
 					enctype="multipart/form-data">
 					<label for="product-name">Product Name:</label>
-					<input type="text" id="name" name="nome" value="<%= produto.nome %>" required>
+					<input type="text" id="name" name="nome" value="<%= produto.product_name %>" required>
 
 					<label for="genre">Genre:</label>
 					<select id="genre" name="genre" required>
@@ -40,28 +40,20 @@
 
 					<div class="flex-container">
 
-						<label for="type">Type:</label>
-						<div class="radio-group">
-							<input type="radio" value="switch" name="type">
-							<label class="radio-label">switch</label>
-							<input type="radio" value="merchandise" name="type">
-							<label class="radio-label">merchandise</label>
-						</div>
-
 						<label for="promotion">In Promotion:</label>
 						<div class="radio-group">
-							<input type="radio" value="true" name="promotion">
+							<input type="radio" value="1" name="promotion">
 							<label class="radio-label">True</label>
-							<input type="radio" value="false" name="promotion">
+							<input type="radio" value="0" name="promotion">
 							<label class="radio-label">False</label>
 						</div>
 
 
 						<label for="released">New Released:</label>
 						<div class="radio-group">
-							<input type="radio" value="true" name="released">
+							<input type="radio" value="1" name="released">
 							<label class="radio-label">True</label>
-							<input type="radio" value="false" name="released">
+							<input type="radio" value="0" name="released">
 							<label class="radio-label">False</label>
 						</div>
 					</div>

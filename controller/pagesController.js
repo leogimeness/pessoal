@@ -57,8 +57,7 @@ const paginasController = {
                 where: { categories_id: req.params.category }
             })
 
-            console.log(req.params.category)
-            console.log(produtosFiltrados)
+            
             if (genres && genres.length > 0) {
                 produtosFiltrados = produtosFiltrados.filter(p => genres.includes(p.genre));
             }   
@@ -84,14 +83,6 @@ const paginasController = {
             console.log(error)
 
         }
-        // let categoryID = Number(req.params.category)
-        // let produtosFiltrados = produtos.filter(p => p.categoryID == categoryID)
-       
-
-        
-
-        
-
 
     },
     showProductDetail: async (req, res) => {
@@ -100,7 +91,6 @@ const paginasController = {
 
         try {
             let id = Number(req.params.idProduto)
-            console.log(id)
             const produto = await Products.findByPk(id,{
                 include: "gallery"
             })
