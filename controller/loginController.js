@@ -25,38 +25,34 @@ const loginController = {
 
         } catch (error) {   
             console.error(error);
-            return res.redirect('/sign-in');
         }
 
-        
-        // const user = await users.find(u => u.email.toLocaleLowerCase() == email.toLocaleLowerCase() && u.password == password)
-        // if (user == undefined) {
-        //     return res.redirect('/sign-in');
-        // };
-
-        // req.session.logInVerified = true;
-        // req.session.username = user.firstName;
-        // res.redirect('/')
-
     },
-    verifyAdmAccount: (req, res) => {
+    verifyAdmAccount: async (req, res) => {
         let { email, password } = req.body
 
-        console.log(email)
-        console.log(password)
+        try {
+            const admUser = await Admins.findOne({
+                where:{
+                    email: email.toLocaleLowerCase(),
+                    passcode: password
+                }
+            })
 
-        let admUser = admUsers.find(a => a.email == email && a.password == password)
+            if (admUser == undefined) {
+                return res.redirect('/adm/login')
+            };
+    
+            req.session.admLogVerifier = true;
+            req.session.admName = admUser.first_name
+    
+            res.redirect('/adm')
+        
+        } catch (error) {
+            console.error(error);
+        }
 
-        console.log(admUser)
-
-        if (admUser == undefined) {
-            return res.redirect('/adm/login')
-        };
-
-        req.session.admLogVerifier = true;
-        req.session.admName = admUser.nome
-
-        res.redirect('/adm')
+      
     },
     logout: (req, res) => {
 
