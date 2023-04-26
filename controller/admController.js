@@ -116,18 +116,23 @@ const admController = {
     addUsuario:(req,res) =>{
         res.render('admUser-form-add.ejs')
     },
-    saveUser:(req,res) =>{
+    saveUser:async (req,res) =>{
 
-        let user = {
-            nome:req.body.name,
-            password:req.body.password,
-            phoneNumber:req.body.phoneNumber,
-            email:req.body.email
-        }
+        try {
+            const user = {
+                first_name:req.body.first_name,
+                last_name:req.body.last_name,
+                passcode:req.body.password,
+                email:req.body.email
+            }
+            
+            await admServices.addUsuario(user)
 
-        admServices.addUsuario(user)
+            res.redirect('/adm/usuarios')
 
-        res.redirect('/adm/usuarios')
+        } catch (error) {
+            console.log(error)
+        }    
 
 
     },

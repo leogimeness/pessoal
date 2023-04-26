@@ -1,4 +1,5 @@
 const admUsers = require('../database/admUsers.json')
+const{Admins} = require('../models')
 const fs = require('fs');
 const path = require('path');
 
@@ -13,27 +14,16 @@ function loadUsuario(usarioId){
     if(usuario == undefined){throw new Error("Usuario Inexistente")}return usuario;
 }
 
-function addUsuario(usuario){
+async function addUsuario(usuario){
 
-    if(admUsers.length > 0){
-        usuario.id = parseInt(admUsers[admUsers.length -1].id) + 1
-    } else{usuario.id = 1;}
-
-    admUsers.push(usuario)
-
-    save(admUsers)
-}
-
-function save(){
-    const filePath = path.resolve(__dirname + "/../database/admUsers.json")
-    fs.writeFileSync(filePath,JSON.stringify(admUsers,null,4))
+    const newUser = await Admins.create(usuario)
+    return newUser
 }
 
 const admServices = {
     loadUsuarios,
     loadUsuario,
     addUsuario,
-    save
 }
 
 module.exports = admServices;
