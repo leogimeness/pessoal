@@ -38,17 +38,15 @@
                             </td>
                     </tr>
 
-                    <div id="confirm-delete" style="display:none;">
-                        <p>Você tem certeza que deseja excluir essa mercadoria?</p>
-                        <button onclick="deleteMercadoria()">Sim</button>
-                        <button onclick="cancelDelete()">Não</button>
-
                 <% } %>
-
+                
                 <div id="confirm-delete" style="display:none;">
                     <p>Você tem certeza que deseja excluir essa mercadoria?</p>
-                    <button onclick="deleteMercadoria()">Sim</button>
+                    <form id ='form_delete' action="/adm/produtos/:id/delete?_method=delete" method="post" >
+                        <button type='submit'>Sim</button>
+                    </form>
                     <button onclick="cancelDelete()">Não</button>
+                    
                 </div>
 
             </tbody>
@@ -59,7 +57,8 @@
     let mercadoriaIdToDelete;
 
     function confirmDelete(id) {
-        mercadoriaIdToDelete = id;
+        const form = document.getElementById("form_delete")
+        form.action = `/adm/produtos/${id}/delete?_method=delete`
         const confirmBox = document.getElementById("confirm-delete");
         confirmBox.style.display = "block";
     }

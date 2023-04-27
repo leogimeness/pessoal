@@ -48,7 +48,7 @@ router.get('/adm/produtos/add',admController.addProdutos);
 router.post('/adm/produtos/store',upload.single('imagem'),admController.saveProduto);
 router.get('/adm/produtos/:id/edit',admController.editProduct);
 router.put('/adm/produtos/:id/edit',upload.single('imagem'),admController.updateProduct);
-router.get('/adm/produtos/:id/delete',admController.deleteProduct)
+router.delete('/adm/produtos/:id/delete',admController.deleteProduct)
 
 // adm crud Usuarios
 router.get("/adm/usuarios",admController.listarUsuarios);
