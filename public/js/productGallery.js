@@ -4,8 +4,6 @@ const rightArrow = document.querySelector('#right-Arr');
 const itemElement = document.querySelector('.mainImage');
 const galleryElement = document.querySelector('.image-gallery');
 
-console.log(galleryItems)
-
 let currentIndex = 0;
 
 leftArrow.addEventListener('click', () => {
@@ -46,6 +44,6 @@ function onGalleryItemClick(evt){
     }
 
     displayImage()
-    console.log(evt.target)
+    // console.log(evt.target)
 
 }

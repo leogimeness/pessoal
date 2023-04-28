@@ -11,44 +11,57 @@
 
         <section class='product-detail'>
 
-
-          <div class="product-gallery">
-
-            <div class="arrows">
-              <button id="left-Arr"><i class="fa-solid fa-left-long"></i></button>
-              <div class="mainImage">
-                <video class= "carrousel-item" controls>
-                  <source src="/videos/Pokemon_Scarlet__Nintendo_Switch.mp4" type="video/mp4">
-                </video>
+          <% if (produto.categories_id==1) {%>
+            <div class="product-gallery">
+              <div class="arrows">
+                <button id="left-Arr"><i class="fa-solid fa-left-long"></i></button>
+                <div class="mainImage">
+                  <video class="carrousel-item" controls>
+                    <source src="/videos/<%= produto?.gallery[3].img_video_path_stored %>.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <button id="right-Arr"><i class="fa-solid fa-right-long"></i></button>
               </div>
-              <button id="right-Arr"><i class="fa-solid fa-right-long"></i></button>
+
+              <div class="image-gallery">
+                <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[0].img_video_path_stored %>"
+                  alt="Product Image 1">
+                <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[1].img_video_path_stored %>"
+                  alt="Product Image 2">
+                <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[2].img_video_path_stored %>"
+                  alt="Product Image 3">
+              </div>
+
             </div>
 
-            <div class="image-gallery">
-              <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[0].img_video_path_stored %>" alt="Product Image 1">
-              <img class= "carrousel-item" src="/img/jogos/115972-super-mario-piranha-plant-poseable-lamp-1200x675.avif" alt="Product Image 2">
-              <img class= "carrousel-item" src="/img/jogos/115640-tree-topper-zelda-package-2000x2000.avif" alt="Product Image 3">
-            </div>
-
-          </div>
-
-          <div class="modal">
-            <button><i class="fa-solid fa-xmark"></i></button>
-          </div>
+            <% } else { %>
+              <div class="product-gallery">
+                <div class="mainImage">
+                  <img class="carrousel-item" src="/img/jogos/<%= produto?.gallery[0].img_video_path_stored %>"
+                    alt="Product Image 1">
+                </div>
+              </div>  
+                <% } %>
 
 
-          <div class="product-info">
-            <!-- <h6>Nintendo <%= produto.type%> -->
-            </h6>
-            <h1>
-              <%= produto.product_name%>
-            </h1>
-            <span>
-              <%= produto.price%>
-            </span>
-            <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
 
-          </div>
+                  <div class="modal">
+                    <button><i class="fa-solid fa-xmark"></i></button>
+                  </div>
+
+
+                  <div class="product-info">
+                    <!-- <h6>Nintendo <%= produto.type%> -->
+                    </h6>
+                    <h1>
+                      <%= produto.product_name%>
+                    </h1>
+                    <span>
+                      <%= produto.price%>
+                    </span>
+                    <a class="get-now-btn" href="/addInCart/<%= produto.id %>">Get it Now!</a>
+
+                  </div>
 
         </section>
 
@@ -60,4 +73,5 @@
   </body>
 
   <script src="/js/productGallery.js"></script>
+
 </html>

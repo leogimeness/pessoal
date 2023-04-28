@@ -1,4 +1,4 @@
-const { Clients, Products } = require('../models')
+const { Categories, Products } = require('../models')
 
 
 
@@ -6,13 +6,12 @@ const paginasController = {
 
     showIndex: async (req, res) => {
 
-        // let mercadorias = produtos.filter(p => p.Promotion == true)
+       
         try {
             const mercadorias = await Products.findAll({
                 include: ["gallery"],
                 where: { promotion: true }
             })
-            // console.log(mercadorias.gallery[0].img_video_path_stored)
             res.render('index.ejs', { mercadorias })
         } catch (error) {
             console.log(error)
@@ -74,8 +73,6 @@ const paginasController = {
                 }
             }
 
-            console.log(produtosFiltrados)
-
             res.render('products.ejs', { produtosFiltrados, categoryId });
 
         } catch (error) {
@@ -86,30 +83,17 @@ const paginasController = {
     },
     showProductDetail: async (req, res) => {
 
-        
-
         try {
-            let id = Number(req.params.idProduto)
+            const id =req.params.idProduto
             const produto = await Products.findByPk(id,{
                 include: "gallery"
             })
-            console.log('aqui', produto.gallery[0].img_video_path_stored)
-            // console.log(produto)
+            console.log('aqui', produto)
             res.render('detail.ejs', { produto })
             
         } catch (error) {
             console.log(error)
         }
-
-        // let id = req.params.idProduto;
-
-        // let produto = produtos.find(p => p.id == id)
-
-        // if (produto !== undefined) {
-        //     res.render('detail.ejs', { produto })
-        // } else {
-        //     res.render('error404.ejs')
-        // }
     },
     contact: (req, res) => {
         res.render('contact.ejs')
