@@ -168,18 +168,17 @@ const admController = {
 
         res.redirect('/adm/usuarios')
     },
-    deleteUsuario: (req, res) => {
+    deleteUsuario: async (req, res) => {
+
         const usuarioId = req.params.id;
-        const index = admUsers.findIndex(user => user.id == usuarioId);
 
-        if (index === -1) {
-            return res.status(404).send("User not found");
+        try {
+            const usuarioDeletar = await Admins.findByPk(usuarioId)
+            usuarioDeletar.destroy();
+            return res.redirect("/adm/usuarios");
+        } catch (error) {
+            console.log(error)
         }
-
-        admUsers.splice(index, 1);
-        admServices.save(admUsers);
-
-        return res.redirect("/adm/usuarios");
     }
 
 }
