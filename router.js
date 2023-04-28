@@ -38,6 +38,7 @@ router.use('/adm',admNameOnViewSetter)
 // adm login
 router.get('/adm/login', admController.login)
 router.post('/adm/login', loginController.verifyAdmAccount)
+router.get('/adm/logout',loginController.admLogout)
 
 router.get('/adm/test',paginasController.test)
 

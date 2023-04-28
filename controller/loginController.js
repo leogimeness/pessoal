@@ -64,6 +64,13 @@ const loginController = {
                 res.redirect('/sign-in?logOut=true');
             }
         });
+    },
+    admLogout: (req,res) =>{
+        req.session.destroy((err) =>{
+            if (err){
+                console.log(err)
+            }res.redirect('/adm/login?logOut=true')
+        })
     }
 
 }

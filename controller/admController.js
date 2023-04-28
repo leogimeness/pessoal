@@ -13,7 +13,13 @@ const admServices = require("../services/admServices")
 
 const admController = {
     login: (req, res) => {
-        res.render('admLogin.ejs')
+        let logOutMessage = undefined
+        let { logOut } = req.query;
+        let isLogOut = Boolean(logOut);
+        if (isLogOut) {
+            logOutMessage = "You have been logout successfully!"
+        }
+        res.render('admLogin.ejs',{logOutMessage})
     },
     showHome: (req, res) => {
         res.render('admhome.ejs')
