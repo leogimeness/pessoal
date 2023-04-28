@@ -35,10 +35,20 @@ module.exports = (Sequelize, DataTypes) => {
             active: {
                 type: DataTypes.TINYINT,
                 allowNull: false
+            },
+            createdAt:{
+                type: DataTypes.DATE
+            },
+            deletedAt:{
+                type: DataTypes.DATE
+            },
+            updatedAt:{
+                type: DataTypes.DATE
             }
         },
         {
-            timestamps: false,
+            timestamps: true,
+            paranoid:true,
             tableName: "products"
         }
     )

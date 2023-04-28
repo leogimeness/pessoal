@@ -129,8 +129,9 @@ const admController = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 passcode: req.body.password,
-                email: req.body.email
+                email: req.body.email,
             }
+            
             await admServices.addUsuario(user)
             res.redirect('/adm/usuarios')
 

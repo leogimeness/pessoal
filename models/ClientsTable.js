@@ -40,6 +40,7 @@ module.exports = (Sequelize, DataTypes) => {
         },
         {
             timestamps:true,
+            paranoid:true,
             tableName:'clients'
         }
 

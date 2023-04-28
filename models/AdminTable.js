@@ -24,10 +24,20 @@ module.exports = (Sequelize, DataTypes) => {
             passcode: {
                 type: DataTypes.STRING(64),
                 allowNull: false
+            },
+            createdAt:{
+                type: DataTypes.DATE
+            },
+            deletedAt:{
+                type: DataTypes.DATE
+            },
+            updatedAt:{
+                type: DataTypes.DATE
             }
         },
         {
-            timestamps:false,
+            timestamps:true,
+            paranoid:true,
             tableName:'admins'
         }
     )

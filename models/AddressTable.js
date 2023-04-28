@@ -33,10 +33,20 @@ module.exports = (Sequelize, DataTypes) => {
             },
             obs: {
                 type: DataTypes.STRING(255)
+            },
+            createdAt:{
+                type: DataTypes.DATE
+            },
+            deletedAt:{
+                type: DataTypes.DATE
+            },
+            updatedAt:{
+                type: DataTypes.DATE
             }
         },
         {
-            timestamps: false,
+            timestamps: true,
+            paranoid:true,
             tableName: 'address'
         }
     )
