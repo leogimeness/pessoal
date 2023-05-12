@@ -1,14 +1,12 @@
 const { Categories, Products } = require('../models')
 
-
-
 const paginasController = {
 
     showIndex: async (req, res) => {
-
        
         try {
             const mercadorias = await Products.findAll({
+                limit:6,
                 include: ["gallery"],
                 where: { promotion: true }
             })

@@ -25,7 +25,6 @@ header .titulos {
 }
 
 header .navbar .dropdown .dropdown-content {
-    margin-top: 10px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -87,18 +86,18 @@ header .userMenu {
     font-size: 20px;
 }
 
-#username{
+#username {
     position: relative;
 }
 
-#username>button{
+#username>button {
     border: none;
     background: none;
     font-size: 20px;
     font-weight: 1000;
 }
 
-#logout-btn{
+#logout-btn {
     display: none;
     z-index: 10;
     font-weight: 600;
@@ -106,7 +105,7 @@ header .userMenu {
     padding: 10px;
     font-size: 20px;
     position: absolute;
-    
+
 }
 
 header .titulos:hover {
@@ -131,18 +130,132 @@ header a {
     color: white;
 }
 
-#username>button:hover{
+#username>button:hover {
     color: white;
 }
 
-#logout-btn a:hover{
+#logout-btn a:hover {
     color: red;
 
 }
+
 .nav .carousel-control-next,
 .carousel-control-prev
 
 /*, .carousel-indicators */
     {
     filter: invert(100%);
+}
+
+/* Styles for screens smaller than 768px (e.g. mobile devices) */
+@media screen and (max-width: 767px) {
+    header #menu {
+        padding: 0px 20px;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    header .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header .navbar img {
+        width: 80px;
+    }
+
+    header .search input {
+        width: 100%;
+    }
+
+    header .userMenu {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    #logout-btn {
+        top: 50px;
+        right: 20px;
+    }
+
+    header .dropdown {
+        position: static;
+    }
+
+    header .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        margin-top: 0;
+        box-shadow: none;
+    }
+
+    header .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    header .search input {
+        display: none;
+    }
+}
+
+/* Styles for screens larger than 768px (e.g. tablets, desktops) */
+@media screen and (min-width: 1200px) {
+    header #menu {
+        padding: 0px 100px;
+        grid-template-columns: 70% 30%;
+        height: 80px;
+    }
+
+    header .navbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+
+    header .navbar img {
+        width: 100px;
+    }
+
+    header .search input {
+        width: 350px;
+    }
+
+    header .userMenu {
+        padding-left: 20px;
+        gap: 30px;
+        font-size: 20px;
+    }
+
+    #logout-btn {
+        top: 100%;
+        right: 0;
+    }
+
+    header .dropdown {
+        position: relative;
+    }
+
+    header .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s ease-in-out;
+    }
+
+    header .dropdown:hover .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+    }
 }

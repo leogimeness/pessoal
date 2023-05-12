@@ -14,6 +14,8 @@ const loginController = {
                     passcode: password
                 }
             })
+            
+            console.log(user)
 
             if (user == undefined) {
                 return res.redirect('/sign-in');
