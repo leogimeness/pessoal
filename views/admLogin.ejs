@@ -1,0 +1,19 @@
+<%- include('parts/head', {css:['global.css','admLogin.css']}) %>
+
+<body>
+    <div class="container">
+		<h1>Admin Login</h1>
+		<% if (logOutMessage !== undefined ){ %>
+			<p id="logOutMessage">
+			  <%= logOutMessage %>
+			</p>
+			<% } %>
+		<form action="/adm/login" method="post">
+			<label for="email">Email:</label>
+			<input type="text" id="username" name="email" required>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<input type="submit" value="Log In">
+		</form>
+	</div>
+</body>

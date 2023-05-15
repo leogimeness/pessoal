@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("parts/head", {css:['global.css','header.css','home.css','footer.css','products.css']}) %>
+
+
+<body>
+    
+<%- include('parts/header.ejs') %>
+
+
+<main>
+
+    <section class="product-container">    
+
+    <div class="left-column-filter">
+
+    <form action="/products/<%= categoryId %>" method="GET">
+
+        <h2>Category</h2>
+        <div class="dropdown">
+            <span>Price</span>
+
+            <div class="checkbox">
+                <label>R$0 - R$50</label><input type="radio" name ="price" value ="50">
+                <label>R$50 +</label><input type="radio" name ="price" value ="51">
+                <label>All prices</label><input type="radio" name ="price" value ="200">
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span>Genre</span>
+
+            <div class="checkbox">
+                <label>Rpg</label><input type="checkbox" name="genre" value ="Rpg">
+                <label>Sport</label><input type="checkbox" name="genre" value="Sport">
+                <label>Adventure</label><input type="checkbox" name="genre" value ="Adventure">
+                <label>Race</label><input type="checkbox" name="genre" value ="Race">
+                <label>Fight</label><input type="checkbox" name="genre" value ="Fight">
+            </div>
+        </div>
+
+        <button type = 'submit'>Apply Filters</button>
+
+    </form>
+
+    </div>
+		
+    <div class="right-column-products">
+        
+
+        <% for (produto of produtosFiltrados){ %>
+
+            <div class="games">
+
+                <a href="/detail/<%= produto.id%>">
+                    <img src="/img/jogos/<%= produto.gallery[0].img_video_path_stored %>" alt="">
+                    <h2><%=produto.product_name%></h2>
+                    <span>$<%= produto.price == 0 ? "Free" : produto.price %></span>
+                </a>
+                
+                <a href="/addInCart/<%= produto.id %>"><button>Add to Cart</button></a>
+
+            </div>
+
+        <%}%>
+    
+    </div>
+
+	</section>
+</main>
+    
+<%- include("parts/footer.ejs") %>
+
+    
+</body>
+</html>

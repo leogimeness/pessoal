@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("parts/head", {css:['global.css',"admHeader.css","test.css"]}) %>
+
+
+<%- include("parts/admHeader.ejs") %>
+
+<body>  
+   
+    <div class="content">
+
+    <% for(let mercadoria of mercadorias){ %>  
+      <div class = "product">
+
+        <p><%= mercadoria.nome %></p>
+
+        <div class="subcategoria">
+          <span>ID:<%= mercadoria.id %></span>
+          <span>Preco:<%= mercadoria.price %></span>
+        </div>
+
+        <img src="/img/jogos/<%= mercadoria.img %>" alt="">
+
+        <div class="subcategoria">
+          <a href="">Edit</a>
+          <a href="">Remover</a>
+        </div>
+        
+      </div>
+
+      <% } %>  
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<Header>
+    <div class="sidebar">
+      <% if(admName){%>
+        <h2 id ="welcome">Welcome <%= admName %></h2>
+      <% } %>
+
+      <a href="/adm">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Produtos</button>
+        <div class="dropdown-content">
+          <a href="/adm/produtos">Lista de Produtos</a>
+          <a href="/adm/produtos/add">Adicionar Novo Produto</a>
+        </div>
+      </div>
+      <a href="/adm/usuarios">Usuarios</a>
+      <a href="/adm/orders">Orders</a>
+      <% if(admName){%>
+        <a id = "logout" href="/adm/logout">Logout</a>
+      <% } %>
+    </div>
+  </Header>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("parts/head", {css:['global.css',"admHeader.css","admProdutos.css"]}) %>
+
+
+<%- include("parts/admHeader.ejs") %>
+
+<body>  
+   
+    <div class="content">
+        
+        <a class ="bt" href="/adm/produtos/add">Adicionar Novo Produto</a><br>
+        
+        <table id="tabela-de-produtos">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Imagem</td>
+                    <td>Nome</td>
+                    <td>Preço</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for(let mercadoria of mercadorias){ %>
+
+                    <tr>
+                            <td><%= mercadoria.id %></td>
+                            <td><img src="/img/jogos/<%= mercadoria.gallery[0].img_video_path_stored %>" alt="<%= mercadoria.product_name %>"></td>
+                            <td><%= mercadoria.product_name %></td>
+                            <td><%= mercadoria.price == 0 ? "Free" : mercadoria.price %></td>
+                            <td>
+                                <a class="bt" href="/adm/produtos/<%= mercadoria.id %>/edit">Editar</a>
+                                <a class="bt" href="#" onclick="confirmDelete(<%= mercadoria.id %>)">Remover</a>
+                            </td>
+                    </tr>
+
+                <% } %>
+                
+                <div id="confirm-delete" style="display:none;">
+                    <p>Você tem certeza que deseja excluir essa mercadoria?</p>
+                    <form id ='form_delete' action="/adm/produtos/:id/delete?_method=delete" method="post" >
+                        <button type='submit'>Sim</button>
+                    </form>
+                    <button onclick="cancelDelete()">Não</button>
+                    
+                </div>
+
+            </tbody>
+        </table>
+    </div>
+<script>
+
+    let mercadoriaIdToDelete;
+
+    function confirmDelete(id) {
+        const form = document.getElementById("form_delete")
+        form.action = `/adm/produtos/${id}/delete?_method=delete`
+        const confirmBox = document.getElementById("confirm-delete");
+        confirmBox.style.display = "block";
+    }
+
+    function deleteMercadoria() {
+        window.location.href = "/adm/produtos/" + mercadoriaIdToDelete + "/delete";
+    }
+
+    function cancelDelete() {
+        const confirmBox = document.getElementById("confirm-delete");
+        confirmBox.style.display = "none";
+    }
+</script>
+</body>
+</html>

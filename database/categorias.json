@@ -1,18 +1,16 @@
 [
     {
         "id":1,
-        "categoria":"switch"
+        "categoria":"games"
     },
     {
         "id":2,
-        "categoria":"64"
-    },
+        "categoria":"shirts"
+    }
+    ,
     {
         "id":3,
-        "categoria":"ds"
-    },
-    {
-        "id":4,
-        "categoria":"console"
+        "categoria":"toys"
     }
+    
 ]

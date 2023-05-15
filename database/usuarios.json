@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "CRISTI",
+        "lastName": "Maetani",
+        "email": "leogimeness@Outlook.com",
+        "phoneNumber": "8555374357",
+        "password": "Senha123",
+        "id": 1
+    },
+    {
+        "firstName": "CRISTI",
+        "lastName": "Maetani",
+        "email": "leogimeness@Outlook.com",
+        "phoneNumber": "8555374357",
+        "password": "Senha",
+        "id": 2
+    },
+    {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phoneNumber": "",
+        "password": "leo",
+        "id": 3
+    }
+]

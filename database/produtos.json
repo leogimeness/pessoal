@@ -1,5 +1,364 @@
 [
     {
-        
+        "id": "1",
+        "nome": "Pokemon™ Scarlet",
+        "genre": "Adventure",
+        "price": "59.99",
+        "img": "1678290114303PokemonScarlet.avif",
+        "categoryID": "1",
+        "NewReleased": "true",
+        "Promotion": "false",
+        "type": "switch"
+    },
+    {
+        "id": "2",
+        "nome": "MARIO + RABBIDS SPARKS OF HOPE",
+        "genre": "Rpg",
+        "price": 44.99,
+        "img": [
+            "mario.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": true,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "3",
+        "nome": "EA SPORTS FIFA 23 Legacy Edition",
+        "genre": "Sport",
+        "price": 39.99,
+        "img": [
+            "fifa23.jfif"
+        ],
+        "categoryID": "1",
+        "NewReleased": true,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "4",
+        "nome": "Dead by Daylight: DARKNESS AMONG US",
+        "genre": "Adventure",
+        "price": 17.99,
+        "img": [
+            "amongus.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "5",
+        "nome": "Assassin's Creed Anniversary Edition Mega Bundle",
+        "genre": "Rpg",
+        "price": 64.99,
+        "img": [
+            "assignscreed.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "6",
+        "nome": "Sonic Frontiers",
+        "genre": "Adventure",
+        "price": 41.99,
+        "img": [
+            "sonic.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "7",
+        "nome": "Mario Kart™ 8 Deluxe",
+        "genre": "Race",
+        "price": 59.99,
+        "img": [
+            "mariokartdeluxe.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "8",
+        "nome": "The Witcher 3: Wild Hunt — Complete Edition",
+        "genre": "Rpg",
+        "price": 29.99,
+        "img": [
+            "theWatcher.jfif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "9",
+        "nome": "resident evil 4",
+        "genre": "Adventure",
+        "price": 19.99,
+        "img": [
+            "residentEvil4.webp"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "10",
+        "nome": "The Legend of Zelda™: Tears of the Kingdom",
+        "genre": "Adventure",
+        "price": 69.99,
+        "img": [
+            "zeldaKingdom.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": true,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "11",
+        "nome": "The Legend of Zelda™: Skyward Sword HD",
+        "genre": "Adventure",
+        "price": 59.99,
+        "img": [
+            "zeldaSkySword.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "12",
+        "nome": "Super Smash Bros.™ Ultimate",
+        "genre": "Fight",
+        "price": 59.99,
+        "img": [
+            "superSmashBross.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "13",
+        "nome": "Luigi s Mansion™ 3",
+        "genre": "Adventure",
+        "price": 59.99,
+        "img": [
+            "luigeMansion.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "14",
+        "nome": "STAR WARS™: The Force Unleashed™",
+        "genre": "Adventure",
+        "price": 19.99,
+        "img": [
+            "starwars.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "16",
+        "nome": "The Legend of Zelda™: Breath of the Wild",
+        "genre": "Adventure",
+        "price": 59.99,
+        "img": [
+            "zeldaBreathOfWild.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": true,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "17",
+        "nome": "Pokémon™ Brilliant Diamond",
+        "genre": "Adventure",
+        "price": 59.99,
+        "img": [
+            "pokeminBrillant.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": true,
+        "type": "Switch"
+    },
+    {
+        "id": "18",
+        "nome": "MLB® The Show™ 22",
+        "genre": "Sport",
+        "price": 59.99,
+        "img": [
+            "MLB.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "19",
+        "nome": "Rocket League®",
+        "genre": "Sport",
+        "price": "0",
+        "img": [
+            "rocketleague.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "20",
+        "nome": "Mario Golf™: Super Rush",
+        "genre": "Sport",
+        "price": 59.99,
+        "img": [
+            "mariogolf.avif"
+        ],
+        "categoryID": "1",
+        "NewReleased": false,
+        "Promotion": false,
+        "type": "Switch"
+    },
+    {
+        "id": "21",
+        "nome": "Holiday 2022 - Decorative Sweater",
+        "genre": "",
+        "price": 59.99,
+        "img": [
+            "2022-sweater-front-1200x675.avif"
+        ],
+        "categoryID": "2",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "23",
+        "nome": "The Legend of Zelda - Hyrule Kingdom T-Shirt",
+        "genre": "",
+        "price": 24.99,
+        "img": [
+            "zeldaShirt.avif"
+        ],
+        "categoryID": "2",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "23",
+        "nome": "Super Mario - Hero Mario T-Shirt",
+        "genre": "",
+        "price": 24.99,
+        "img": [
+            "marioshirt.avif"
+        ],
+        "categoryID": "2",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "25",
+        "nome": "Nintendo Mario Kart Bowser Ornament",
+        "genre": "",
+        "price": 29.99,
+        "img": [
+            "117733-hallmark-bowser-kart-ornament-front-1200x675.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "26",
+        "nome": "Nintendo Super Mario Powered Up With Mario Raccoon Mario Ornament",
+        "genre": "",
+        "price": 39.99,
+        "img": [
+            "117734-hallmark-mario-tanooki-ornament-front-1200x675.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "27",
+        "nome": "Nintendo The Legend of Zelda Link Ornament",
+        "genre": "",
+        "price": 39.99,
+        "img": [
+            "117731-hallmark-loz-link-ornament-front-1200x675.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "28",
+        "nome": "Mini Nintendo Super Mario Yoshi Ornament, 0.876",
+        "genre": "Adventure",
+        "price": 9.99,
+        "img": [
+            "117735-hallmark-yoshi-ornament-front-1200x675.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "29",
+        "nome": "Super Mario - Piranha Plant Poseable Lamp",
+        "genre": "",
+        "price": 39.99,
+        "img": [
+            "115972-super-mario-piranha-plant-poseable-lamp-1200x675.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
+    },
+    {
+        "id": "30",
+        "nome": "The Legend of Zelda - Triforce Light-Up Tree Topper",
+        "genre": "",
+        "price": 19.99,
+        "img": [
+            "115640-tree-topper-zelda-package-2000x2000.avif"
+        ],
+        "categoryID": "3",
+        "NewReleased": "",
+        "Promotion": "",
+        "type": "Merchandise"
     }
 ]

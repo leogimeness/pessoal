@@ -3,178 +3,145 @@
 
 <%- include("parts/head", {css:['global.css','header.css','home.css','footer.css']}) %>
 
-<body>
-    
-    <%- include('parts/header.ejs') %>
+    <body>
 
-    <%- include('parts/banner.ejs') %>
+        <%- include('parts/header.ejs') %>
 
-<main>
+            <%- include('parts/banner.ejs') %>
 
-    <section class = "qualities">
-        
-        <div>
-            <i class="fa-brands fa-pix"></i>
-            <span class="top">Pague no pix com</span>
-            <span class="bot">12% a vista </span>
-        </div>
+                <main>
 
-        <div>
-            
-            <i class="fa-brands fa-cc-paypal"></i>
-            <span  class="top" >Parcelamentos em</span>
-            <span class="bot" >ate 18x</span>
-        </div>
+                    <section class="qualities">
 
-        <div>
+                        <div>
+                            <i class="fa-brands fa-pix"></i>
+                            <span class="top">Pague no pix com</span>
+                            <span class="bot">12% a vista </span>
+                        </div>
 
-            <i class="fa-solid fa-rotate-left"></i>
-            <span  class="top" >Garantia de troca em</span>
-            <span class="bot" >ate 7 dias</span>
+                        <div>
 
-        </div>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                            <span class="top">Parcelamentos em</span>
+                            <span class="bot">ate 18x</span>
+                        </div>
 
-    </section>
+                        <div>
 
-        <!-- --------------------------------------------------------------------------------------------------------------- -->
-    
-    <h2>Best Sellers</h2>     
-    <section class = "gamedisplay">
-        
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/PokemonScarlet.avif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-            </a>
-            <button>Add to Cart</button>
-        </div>
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span class="top">Garantia de troca em</span>
+                            <span class="bot">ate 7 dias</span>
 
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/mario.avif" alt="">
-                <h2>Mario + Rabbids Sparks Of Hope</h2>
-                <span>R$ 0,00</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
+                        </div>
 
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/fifa23.jfif" alt="">
-                <h2>EA SPORTS FIFA 23 Legacy Edition</h2>
-                <span>R$ 0,00</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
+                    </section>
 
-    </section>
+                    <!-- --------------------------------------------------------------------------------------------------------------- -->
 
-    
-    <!-- --------------------------------------------------------------------------------------------------------------- -->
-    
-    <h2>Reviews</h2>     
-    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <h2>Best Sellers</h2>
+                    <section class="gamedisplay">
 
-    <!-- Carousel -->
+                        <div class="games">
+                            <a href="">
+                                <img src="/img/jogos/PokemonScarlet.avif" alt="">
+                                <h2>Pokémon™ Scarlet</h2>
+                                <span>R$ 0,00</span>
+                            </a>
+                            <button>Add to Cart</button>
+                        </div>
 
-    <div id="myCarousel" class="carousel slide" >
-        <div class="carousel-indicators">
-            <button type="button"  data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button"  data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button"  data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <h2>Nome</h2>
-            <p>Review</p>
-            <span>date</span>
-            </div>
-            <div class="carousel-item">
-                <h2>Nome</h2>
-            <p>Review</p>
-            <span>date</span>
-            </div>
-            <div class="carousel-item">
-                <h2>Nome</h2>
-            <p>Review</p>
-            <span>date</span>
-            </div>
-        </div>
-    </div>
+                        <div class="games">
+                            <a href="">
+                                <img src="/img/jogos/mario.avif" alt="">
+                                <h2>Mario + Rabbids Sparks Of Hope</h2>
+                                <span>R$ 0,00</span>
 
-        
+                            </a>
+                            <button>Add to Cart</button>
+                        </div>
 
-    </section>
-    <!-- --------------------------------------------------------------------------------------------------------------- -->
-    
-    <h2>Promocoes</h2>
-    <section class="gamedisplay">
+                        <div class="games">
+                            <a href="">
+                                <img src="/img/jogos/fifa23.jfif" alt="">
+                                <h2>EA SPORTS FIFA 23 Legacy Edition</h2>
+                                <span>R$ 0,00</span>
+                            </a>
+                            <button>Add to Cart</button>
+                        </div>
 
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/amongus.avif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount">10% at the checkout</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
+                    </section>
 
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/assignscreed.avif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount" >5% at the checkout</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/sonic.avif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount">50% at the checkout </span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/mariokartdeluxe.avif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount" >5% at the checkout</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/theWatcher.jfif" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount" >12% at the checkout</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
-        <div class="games">
-            <a href="">
-                <img src="/img/jogos/residentEvil4.webp" alt="">
-                <h2>Pokémon™ Scarlet</h2>
-                <span>R$ 0,00</span>
-                <span class = "discount" >7% at the checkout</span>
-                <button>Add to Cart</button>
-            </a>
-        </div>
 
-    </section>
- 
-</main>
+                    <!-- --------------------------------------------------------------------------------------------------------------- -->
 
-<%- include("parts/footer.ejs") %>
+                    <h2>Reviews</h2>
+                    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
 
-<!-- js scripts -->
-<script  src = "js/reviewslide.js"></script>
- 
-</body>
+                        <!-- Carousel -->
+
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h2>Nome</h2>
+                                    <p>Review</p>
+                                    <span>date</span>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2>Nome</h2>
+                                    <p>Review</p>
+                                    <span>date</span>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2>Nome</h2>
+                                    <p>Review</p>
+                                    <span>date</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <!-- --------------------------------------------------------------------------------------------------------------- -->
+
+                    <h2>Promocoes</h2>
+                    <section class="gamedisplay">
+
+
+                        <% for(let i=0; i < mercadorias.length; i++) {%>
+
+                            <div class="games">
+                                <a href="/detail/<%= mercadorias[i].id%>">
+                                    <img src="/img/jogos/<%= mercadorias[i].gallery[0].img_video_path_stored %>" alt="">
+                                    <h2>
+                                        <%= mercadorias[i].product_name %>
+                                    </h2>
+                                    <span>$<%= mercadorias[i].price=="0" ? "Free" : mercadorias[i].price%></span>
+                                    <span class="discount">10% at the checkout</span>
+                                </a>
+                                <a href="/addInCart/<%= mercadorias[i].id %>"><button>Add to Cart</button></a>
+                            </div>
+
+                            <%}%>
+
+
+                    </section>
+
+                </main>
+
+                <%- include("parts/footer.ejs") %>
+
+                    <!-- js scripts -->
+                    <script src="js/reviewslide.js"></script>
+
+    </body>
+
 </html>

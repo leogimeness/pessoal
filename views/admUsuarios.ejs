@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("parts/head", {css:['global.css',"admHeader.css","admProdutos.css"]}) %>
+
+
+<%- include("parts/admHeader.ejs") %>
+
+<body>  
+   
+    <div class="content">
+        
+        <a class ="bt" href="/adm/usuarios/add">Adicionar Novo Usuario Adm</a><br>
+        
+        <table id="tabela-de-produtos">
+           
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Email</td>
+                    <td>First Name</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for(let userAdm of admUsers){ %>
+
+                    <tr>
+                            <td><%= userAdm.id %></td>
+                            <td><%= userAdm.email %></td>
+                            <td><%= userAdm.first_name %></td>
+                            <td>
+                                <a class="bt" href="/adm/usuarios/<%= userAdm.id %>/edit">Editar</a>
+                                <a class="bt" href="/adm/usuarios/<%= userAdm.id %>/delete">Remover</a>
+                            </td>
+                    </tr>
+
+                <% } %>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
